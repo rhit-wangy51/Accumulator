@@ -1,0 +1,103 @@
+module tb_PC();
+
+//input
+reg [15:0] PCInA;
+reg [15:0] PCInB;
+reg [15:0] PCInC;
+reg [1:0] PCSrc;
+reg [0:0] PCWrite;
+reg [0:0] bneOrbeq;
+reg [0:0] Branch;
+reg [0:0] Zero;
+reg [0:0] Reset;
+reg [0:0] CLK;
+
+//output
+wire [15:0] PCOut;
+
+PC test_PC(
+	.PCWrite(PCWrite),
+	.Zero(Zero),
+	.Branch(Branch),
+	.bneOrbeq(bneOrbeq),
+	.PCInA(PCInA),
+	.PCInB(PCInB),
+	.PCInC(PCInC),
+	.PCSrc(PCSrc),
+	.reset(Reset),
+	.CLK(CLK),
+	.PCOut(PCOut)
+);
+
+parameter HALF_PERIOD = 50;
+
+initial begin
+    CLK = 0;
+    forever begin
+        #(HALF_PERIOD);
+        CLK = ~CLK;
+	 end
+end
+
+initial begin
+
+	PCWrite = 0;
+	Zero = 0;
+	Branch = 0;
+	bneOrbeq = 0;
+	PCSrc = 2'b00;
+	PCInA = 16'hFFFF;
+	PCInB = 16'h1111;
+	PCInC = 16'h2222;
+	#HALF_PERIOD
+	
+	//Test reset
+	Reset = 1;
+	#(4*HALF_PERIOD);
+	Reset = 0;
+	
+	$display("Testing reset.");
+	
+	
+	if(PCOut != 0) begin
+		 $display("%t (COUNT UP) Error at output = %d, expecting = 0", $time, PCOut);
+	 end
+	 else begin
+		$display("Testing reset PASS.");
+	 end
+	
+	//Test PCWrite
+	PCWrite = 1;
+	#(2*HALF_PERIOD);
+	
+	$display("Testing PCWrite.");
+	
+	
+	if(PCOut != 16'hFFFF) begin
+		 $display("%t (COUNT UP) Error at output = %d, expecting = 0", $time, PCOut);
+	 end
+	 else begin
+		$display("Testing PCWrite PASS.");
+	 end
+	 
+	 //Test branch
+	 $display("Testing branch.");
+	 PCWrite = 0;
+	 PCSrc = 2'b01;
+	 Branch = 1;
+	 Zero = 1;
+	 bneOrbeq = 1;
+	 #(2*HALF_PERIOD);
+	 
+	 if(PCOut != 16'h1111) begin
+		 $display("%t (COUNT UP) Error at output = %d, expecting = 0", $time, PCOut);
+	 end
+	 else begin
+		$display("Testing branch PASS.");
+	 end
+	 
+	 
+	
+	
+end
+endmodule

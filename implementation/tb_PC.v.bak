@@ -1,0 +1,49 @@
+module tb_PC();
+
+//input
+reg [15:0] In;
+reg [0:0] PCWrite;
+reg [0:0] bne/beq
+reg [0:0] Branch
+reg [0:0] Zero
+reg [0:0] Reset;
+reg [0:0] CLK;
+
+//output
+wire [15:0] Out;
+
+PC test_PC(
+	.PCWrite(PCWrite),
+	.Zero(Zero),
+	.Branch(Branch),
+	.bne/beq(bne/beq),
+	.In(In),
+	.Reset(Reset),
+	.CLK(CLK),
+	.Out(Out)
+);
+
+parameter HALF_PERIOD = 50;
+
+initial begin
+    CLK = 0;
+    forever begin
+        #(HALF_PERIOD);
+        CLK = ~CLK;
+	 end
+end
+
+initial begin
+
+	PCWrite = 0;
+	Zero = 0;
+	Branch = 0;
+	bne/beq = 0;
+	In = 0;
+	Reset = 1;
+	#(4*HALF_PERIOD)
+	Reset = 0
+	
+	
+end
+endmodule

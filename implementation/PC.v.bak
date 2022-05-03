@@ -1,0 +1,20 @@
+module PC(
+	input [0:0] PCWrite,
+	input [0:0] Zero,
+	input [0:0] Branch,
+	input [0:0] bneOrbeq,
+	input [15:0] PCInA,
+	input [15:0] PCInB,
+	input [15:0] PCInC,
+	output reg [15:0] PCOut
+);
+
+
+always begin
+	if(OP==1'b0)
+		Out <= A; 
+	else
+		Out <= B;
+end
+
+endmodule
