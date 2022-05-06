@@ -4,7 +4,7 @@ module ze16(
 );
 
 
-always begin
+always @(In) begin
 	Out <= { {8'b0}, In[7:0] };
 end
 
