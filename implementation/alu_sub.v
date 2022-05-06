@@ -9,8 +9,8 @@ module alu_sub(
 	input [3:0] SrcB,
 	input [2:0] ALUOP,
 	input [0:0] CLK,
-	wire  [15:0] AOut,
-	wire  [15:0] BOut,
+	reg  [15:0] AOut ,
+	reg  [15:0] BOut,
 	output reg [15:0] Out,
 	output reg [0:0] Zero
 );

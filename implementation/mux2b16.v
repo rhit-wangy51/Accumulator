@@ -8,7 +8,7 @@ module mux2b16(
 );
 
 
-always begin
+always @(A, B, C, D, OP) begin
 	if(OP == 2'b11)
 		Out <= A; 
 	else if(OP == 2'b10)
