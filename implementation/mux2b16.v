@@ -10,13 +10,13 @@ module mux2b16(
 
 always @(A, B, C, D, OP) begin
 	if(OP == 2'b11)
-		Out <= A; 
+		Out <= D; 
 	else if(OP == 2'b10)
-		Out <= B;
-	else if(OP == 2'b01)
 		Out <= C;
+	else if(OP == 2'b01)
+		Out <= B;
 	else
-		Out <= D;
+		Out <= A;
 end
 
 endmodule
