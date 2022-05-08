@@ -2,6 +2,7 @@ module alu_sub(
 	input [15:0] PC,
 	input [15:0] ACC,
 	input [15:0] SP,
+	input [15:0] MDR,
 	input [15:0] SE,
 	input [15:0] ZE,
 	input [15:0] SL1,
@@ -9,21 +10,26 @@ module alu_sub(
 	input [3:0] SrcB,
 	input [2:0] ALUOP,
 	input [0:0] CLK,
-	reg  [15:0] AOut ,
-	reg  [15:0] BOut,
 	output reg [15:0] Out,
 	output reg [0:0] Zero
 );
 
 ALUSrcA mux2b16(
-	.D(PC),
-	.C(ACC),
-	.B(SP),
+	.A(PC),
+	.B(ACC),
+	.C(SP),
 	.OP(SrcA),
 	.Out(AOut)
 );
 
-ALUSrcB mux3b16(
+ALUSrcB CSSE_Project_3_Bit_Mux(
+	.a(2'b10),
+	.b(SE),
+	.c(MDR),
+	.d(ZE),
+	.e(SL1),
+	.sel(SrcB),
+	.out(BOut)
 );
 
 ALUC alu16(
