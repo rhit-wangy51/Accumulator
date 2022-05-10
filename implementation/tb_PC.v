@@ -68,18 +68,20 @@ initial begin
 	
 	//Test PCWrite
 	PCWrite = 1;
-	#(2*HALF_PERIOD);
+	
+	#(4*HALF_PERIOD);
 	
 	$display("Testing PCWrite.");
 	
 	
 	if(PCOut != 16'hFFFF) begin
-		 $display("%t (COUNT UP) Error at output = %d, expecting = 0", $time, PCOut);
+		 $display("%t (COUNT UP xxxxxxxx) Error at output = %d, expecting = %d, enable = %d", $time, PCOut, PCInA, PCWrite | (Branch & bneOrbeq));
+		 
 	 end
 	 else begin
 		$display("Testing PCWrite PASS.");
 	 end
-	 
+	 #(4*HALF_PERIOD);
 	 //Test branch
 	 $display("Testing branch.");
 	 PCWrite = 0;
@@ -87,10 +89,10 @@ initial begin
 	 Branch = 1;
 	 Zero = 1;
 	 bneOrbeq = 1;
-	 #(2*HALF_PERIOD);
+	 #(2.5*HALF_PERIOD);
 	 
 	 if(PCOut != 16'h1111) begin
-		 $display("%t (COUNT UP) Error at output = %d, expecting = 0", $time, PCOut);
+		 $display("%t (COUNT UP) Error at output = %d, expecting = 1111", $time, PCOut);
 	 end
 	 else begin
 		$display("Testing branch PASS.");

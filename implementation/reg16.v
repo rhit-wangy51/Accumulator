@@ -7,10 +7,10 @@ module reg16(
 );
 
 
-always @ (posedge CLK, posedge reset) begin
+always @ (posedge CLK) begin//posedge reset
 	if(reset==1'b1)
 		Out <= 16'b0; 
-	else if(E == 1'b0)
+	else if(E == 1'b1)
 		Out <= In;
 	else
 		Out <= Out; 
