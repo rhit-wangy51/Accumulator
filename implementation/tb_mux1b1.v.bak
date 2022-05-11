@@ -1,0 +1,53 @@
+module tb_mux1b1();
+
+//input
+reg [0:0] PCInA;
+reg [0:0] PCInB;
+reg [0:0] OP;
+
+//output
+wire [0:0] MuxOut;
+
+mux1b1 test_mux1b(
+	.A(A),
+	.B(B),
+	.OP(OP),
+	.Out(MuxOut),
+);
+
+initial begin
+	A = 1;
+	B = 2;
+	OP = 0;
+	#10
+	
+	
+	//Test op = 1
+	$display("Testing op = 0.");
+	
+	
+	if(PCOut != 1) begin
+		 $display("%t (COUNT UP) Error at output = %d, expecting = 1", $time, PCOut);
+	 end
+	 else begin
+		$display("Testing op = 0 PASS.");
+	 end
+	 
+	 
+	 
+	 //Test op = 1
+	 
+	$display("Testing op = 1.");
+	OP = 1;
+	#10
+	
+	if(PCOut != 2) begin
+		 $display("%t (COUNT UP) Error at output = %d, expecting = 2", $time, PCOut);
+	 end
+	 else begin
+		$display("Testing op = 1 PASS.");
+	 end
+
+end
+
+endmodule

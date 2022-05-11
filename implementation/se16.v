@@ -4,7 +4,7 @@ module se16(
 );
 
 
-always begin
+always @(In) begin
 	Out <= { {8{In[7]}}, In[7:0] };
 end
 

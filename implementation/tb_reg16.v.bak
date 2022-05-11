@@ -1,0 +1,50 @@
+module tb_reg16();
+
+//input
+reg [15:0] In;
+reg [0:0] E;
+reg [0:0] reset;
+reg [0:0] CLK;
+
+//output
+wire [15:0] Out;
+
+reg16 test_reg(
+	.In(In),
+	.E(E),
+	.reset(reset),
+	.CLK(CLK),
+	.Out(Out)
+);
+
+parameter HALF_PERIOD = 50;
+integer counter = 0;
+integer failures  = 0;
+
+initial begin
+    CLK = 0;
+    forever begin
+        #(HALF_PERIOD);
+        CLK = ~CLK;
+	 end
+end
+
+initial begin
+
+	In = 0;
+	E = 0;
+	
+	reset = 1;
+	#(100*HALF_PERIOD);
+	reset = 0;
+
+// reset
+	$display("Testing reset.");
+	
+	
+	if(Out != 0) begin
+		 failures = failures + 1;
+		 $display("%t (COUNT UP) Error at cycle %d, output = %d, expecting = 0", $time, cycle_counter, dout);
+	 end
+end
+endmodule

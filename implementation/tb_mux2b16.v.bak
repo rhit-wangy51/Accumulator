@@ -1,0 +1,84 @@
+module tb_reg16();
+
+//input
+reg [15:0] A;
+reg [15:0] B;
+reg [15:0] C;
+reg [15:0] D;
+reg [1:0] OP;
+
+//output
+wire [15:0] Out;
+
+mux2b16 test_mux2(
+	.A(A),
+	.B(B),
+	.C(C),
+	.D(D),
+	.OP(OP),
+	.Out(Out)
+);
+
+
+
+initial begin
+
+	A = 1000
+	B = 0100
+	C = 0010
+	D = 0001
+	
+// Select A
+	$display("Testing A.");
+	
+	OP = 11
+	
+	
+	if(Out != 1000) begin
+		 $display("%t (A SELECT) Error at output = %d, expecting = 1000", $time, Out);
+	 end
+	 else begin
+		$display("Testing A select PASS.");
+	 end
+	 
+// Select B
+	$display("Testing B.");
+	
+	OP = 10
+	
+	
+	if(Out != 0100) begin
+		 $display("%t (B SELECT) Error at output = %d, expecting = 0100", $time, Out);
+	 end
+	 else begin
+		$display("Testing B select PASS.");
+	 end
+	 
+// Select C
+	$display("Testing C.");
+	
+	OP = 01
+	
+	
+	if(Out != 0010) begin
+		 $display("%t (C SELECT) Error at output = %d, expecting = 0010", $time, Out);
+	 end
+	 else begin
+		$display("Testing C select PASS.");
+	 end
+	 
+// Select D
+	$display("Testing D.");
+	
+	OP = 00
+	
+	
+	if(Out != 0001) begin
+		 $display("%t (D SELECT) Error at output = %d, expecting = 0001", $time, Out);
+	 end
+	 else begin
+		$display("Testing D select PASS.");
+	 end
+	 	
+end
+endmodule

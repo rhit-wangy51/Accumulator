@@ -1,0 +1,22 @@
+module mux2b16(
+	input [15:0] A,
+	input [15:0] B,
+	input [15:0] C,
+	input [15:0] D,
+	input [1:0] OP,
+	output reg [15:0] Out
+);
+
+
+always @(A, B, C, D, OP) begin
+	if(OP == 2'b11)
+		Out <= D; 
+	else if(OP == 2'b10)
+		Out <= C;
+	else if(OP == 2'b01)
+		Out <= B;
+	else
+		Out <= A;
+end
+
+endmodule
