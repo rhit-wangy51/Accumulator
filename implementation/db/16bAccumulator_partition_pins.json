@@ -76,10 +76,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "R[0]",
-					"strict" : false
-				},
-				{
 					"name" : "Addr[14]",
 					"strict" : false
 				},

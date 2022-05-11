@@ -1,0 +1,3 @@
+module tb_connected_control_memory();
+
+endmodule
