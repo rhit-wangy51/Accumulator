@@ -32,5 +32,3 @@ module wires_subsystem(
 	assign EightShift = IR << 8;
 	
 endmodule
-	
-	
