@@ -6,7 +6,7 @@ module mux1b16(
 );
 
 
-always begin
+always @(A, B, OP) begin
 	if(OP==1'b0)
 		Out <= A; 
 	else

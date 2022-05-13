@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 16bAccumulator
-Wed Apr 27 21:26:16 2022
+Tue May 10 15:28:23 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,8 +16,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. General Register Statistics
  10. Registers Packed Into Inferred Megafunctions
- 11. Source assignments for altsyncram:mem_rtl_0|altsyncram_k6e1:auto_generated
- 12. Parameter Settings for Inferred Entity Instance: altsyncram:mem_rtl_0
+ 11. Source assignments for altsyncram:ram_rtl_0|altsyncram_1gd1:auto_generated
+ 12. Parameter Settings for Inferred Entity Instance: altsyncram:ram_rtl_0
  13. altsyncram Parameter Settings by Entity Instance
  14. Post-Synthesis Netlist Statistics for Top Partition
  15. Elapsed Time Per Partition
@@ -47,16 +47,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 27 21:26:16 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 10 15:28:23 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; 16bAccumulator                              ;
 ; Top-level Entity Name              ; mem16                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 107                                         ;
-;     Total combinational functions  ; 104                                         ;
+; Total logic elements               ; 115                                         ;
+;     Total combinational functions  ; 112                                         ;
 ;     Dedicated logic registers      ; 3                                           ;
 ; Total registers                    ; 3                                           ;
-; Total pins                         ; 51                                          ;
+; Total pins                         ; 50                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,576                                   ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -165,25 +165,28 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
-; mem16.v                          ; yes             ; User Verilog HDL File        ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v                ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                       ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                       ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                           ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                           ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
-; db/altsyncram_k6e1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/altsyncram_k6e1.tdf ;         ;
-; db/decode_rsa.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/decode_rsa.tdf      ;         ;
-; db/mux_qob.tdf                   ; yes             ; Auto-Generated Megafunction  ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/mux_qob.tdf         ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                               ;
++----------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; mem16.v                                      ; yes             ; User Verilog HDL File                                 ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v                                      ;         ;
+; memory.txt                                   ; yes             ; User File                                             ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.txt                                   ;         ;
+; altsyncram.tdf                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                             ;         ;
+; stratix_ram_block.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                      ;         ;
+; lpm_mux.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                ;         ;
+; lpm_decode.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                             ;         ;
+; aglobal181.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                             ;         ;
+; a_rdenreg.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                              ;         ;
+; altrom.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                 ;         ;
+; altram.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                 ;         ;
+; altdpram.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                               ;         ;
+; db/altsyncram_1gd1.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/altsyncram_1gd1.tdf                       ;         ;
+; db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif ;         ;
+; db/decode_rsa.tdf                            ; yes             ; Auto-Generated Megafunction                           ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/decode_rsa.tdf                            ;         ;
+; db/decode_k8a.tdf                            ; yes             ; Auto-Generated Megafunction                           ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/decode_k8a.tdf                            ;         ;
+; db/mux_qob.tdf                               ; yes             ; Auto-Generated Megafunction                           ; D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/mux_qob.tdf                               ;         ;
++----------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -191,55 +194,56 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 107          ;
+; Estimated Total logic elements              ; 115          ;
 ;                                             ;              ;
-; Total combinational functions               ; 104          ;
+; Total combinational functions               ; 112          ;
 ; Logic element usage by number of LUT inputs ;              ;
 ;     -- 4 input functions                    ; 88           ;
-;     -- 3 input functions                    ; 16           ;
+;     -- 3 input functions                    ; 24           ;
 ;     -- <=2 input functions                  ; 0            ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 104          ;
+;     -- normal mode                          ; 112          ;
 ;     -- arithmetic mode                      ; 0            ;
 ;                                             ;              ;
 ; Total registers                             ; 3            ;
 ;     -- Dedicated logic registers            ; 3            ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
-; I/O pins                                    ; 51           ;
+; I/O pins                                    ; 50           ;
 ; Total memory bits                           ; 1048576      ;
 ;                                             ;              ;
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; CLK[0]~input ;
 ; Maximum fan-out                             ; 131          ;
-; Total fan-out                               ; 2652         ;
-; Average fan-out                             ; 7.87         ;
+; Total fan-out                               ; 2672         ;
+; Average fan-out                             ; 7.79         ;
 +---------------------------------------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                           ; Entity Name     ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------+-----------------+--------------+
-; |mem16                                 ; 104 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 51   ; 0            ; |mem16                                                                        ; mem16           ; work         ;
-;    |altsyncram:mem_rtl_0|              ; 104 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |mem16|altsyncram:mem_rtl_0                                                   ; altsyncram      ; work         ;
-;       |altsyncram_k6e1:auto_generated| ; 104 (0)             ; 3 (3)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |mem16|altsyncram:mem_rtl_0|altsyncram_k6e1:auto_generated                    ; altsyncram_k6e1 ; work         ;
-;          |decode_rsa:decode2|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mem16|altsyncram:mem_rtl_0|altsyncram_k6e1:auto_generated|decode_rsa:decode2 ; decode_rsa      ; work         ;
-;          |mux_qob:mux3|                ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mem16|altsyncram:mem_rtl_0|altsyncram_k6e1:auto_generated|mux_qob:mux3       ; mux_qob         ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                    ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name     ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
+; |mem16                                 ; 112 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 50   ; 0            ; |mem16                                                                            ; mem16           ; work         ;
+;    |altsyncram:ram_rtl_0|              ; 112 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |mem16|altsyncram:ram_rtl_0                                                       ; altsyncram      ; work         ;
+;       |altsyncram_1gd1:auto_generated| ; 112 (0)             ; 3 (3)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |mem16|altsyncram:ram_rtl_0|altsyncram_1gd1:auto_generated                        ; altsyncram_1gd1 ; work         ;
+;          |decode_k8a:rden_decode|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mem16|altsyncram:ram_rtl_0|altsyncram_1gd1:auto_generated|decode_k8a:rden_decode ; decode_k8a      ; work         ;
+;          |decode_rsa:decode3|          ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mem16|altsyncram:ram_rtl_0|altsyncram_1gd1:auto_generated|decode_rsa:decode3     ; decode_rsa      ; work         ;
+;          |mux_qob:mux2|                ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mem16|altsyncram:ram_rtl_0|altsyncram_1gd1:auto_generated|mux_qob:mux2           ; mux_qob         ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                      ;
-+----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
-; Name                                                           ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
-+----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
-; altsyncram:mem_rtl_0|altsyncram_k6e1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 65536        ; 16           ; 65536        ; 16           ; 1048576 ; None ;
-+----------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                         ;
++----------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+----------------------------------------------+
+; Name                                                           ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF                                          ;
++----------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+----------------------------------------------+
+; altsyncram:ram_rtl_0|altsyncram_1gd1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 65536        ; 16           ; --           ; --           ; 1048576 ; db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif ;
++----------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -252,7 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -262,27 +266,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------+--------------+---------------+
 ; Register Name ; Megafunction ; Type          ;
 +---------------+--------------+---------------+
-; Out[0]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[1]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[2]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[3]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[4]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[5]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[6]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[7]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[8]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[9]~reg0   ; mem_rtl_0    ; RAM           ;
-; Out[10]~reg0  ; mem_rtl_0    ; RAM           ;
-; Out[11]~reg0  ; mem_rtl_0    ; RAM           ;
-; Out[12]~reg0  ; mem_rtl_0    ; RAM           ;
-; Out[13]~reg0  ; mem_rtl_0    ; RAM           ;
-; Out[14]~reg0  ; mem_rtl_0    ; RAM           ;
-; Out[15]~reg0  ; mem_rtl_0    ; RAM           ;
+; Out[0]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[1]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[2]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[3]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[4]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[5]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[6]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[7]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[8]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[9]~reg0   ; ram_rtl_0    ; RAM           ;
+; Out[10]~reg0  ; ram_rtl_0    ; RAM           ;
+; Out[11]~reg0  ; ram_rtl_0    ; RAM           ;
+; Out[12]~reg0  ; ram_rtl_0    ; RAM           ;
+; Out[13]~reg0  ; ram_rtl_0    ; RAM           ;
+; Out[14]~reg0  ; ram_rtl_0    ; RAM           ;
+; Out[15]~reg0  ; ram_rtl_0    ; RAM           ;
 +---------------+--------------+---------------+
 
 
 +----------------------------------------------------------------------------+
-; Source assignments for altsyncram:mem_rtl_0|altsyncram_k6e1:auto_generated ;
+; Source assignments for altsyncram:ram_rtl_0|altsyncram_1gd1:auto_generated ;
 +---------------------------------+--------------------+------+--------------+
 ; Assignment                      ; Value              ; From ; To           ;
 +---------------------------------+--------------------+------+--------------+
@@ -290,64 +294,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+--------------+
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: altsyncram:mem_rtl_0      ;
-+------------------------------------+----------------------+----------------+
-; Parameter Name                     ; Value                ; Type           ;
-+------------------------------------+----------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped        ;
-; OPERATION_MODE                     ; DUAL_PORT            ; Untyped        ;
-; WIDTH_A                            ; 16                   ; Untyped        ;
-; WIDTHAD_A                          ; 16                   ; Untyped        ;
-; NUMWORDS_A                         ; 65536                ; Untyped        ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped        ;
-; WIDTH_B                            ; 16                   ; Untyped        ;
-; WIDTHAD_B                          ; 16                   ; Untyped        ;
-; NUMWORDS_B                         ; 65536                ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Untyped        ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped        ;
-; BYTE_SIZE                          ; 8                    ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped        ;
-; INIT_FILE                          ; UNUSED               ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped        ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_k6e1      ; Untyped        ;
-+------------------------------------+----------------------+----------------+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: altsyncram:ram_rtl_0                              ;
++------------------------------------+----------------------------------------------+----------------+
+; Parameter Name                     ; Value                                        ; Type           ;
++------------------------------------+----------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                            ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                           ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                          ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                           ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                          ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                            ; Untyped        ;
+; OPERATION_MODE                     ; SINGLE_PORT                                  ; Untyped        ;
+; WIDTH_A                            ; 16                                           ; Untyped        ;
+; WIDTHAD_A                          ; 16                                           ; Untyped        ;
+; NUMWORDS_A                         ; 65536                                        ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                 ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                         ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                         ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                         ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                         ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                         ; Untyped        ;
+; WIDTH_B                            ; 1                                            ; Untyped        ;
+; WIDTHAD_B                          ; 1                                            ; Untyped        ;
+; NUMWORDS_B                         ; 1                                            ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                       ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                       ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                       ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                       ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                 ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                       ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                         ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                         ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                         ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                         ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                         ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                         ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                            ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                            ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                         ; Untyped        ;
+; BYTE_SIZE                          ; 8                                            ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; OLD_DATA                                     ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                         ; Untyped        ;
+; INIT_FILE                          ; db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                       ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                            ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                       ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                       ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                       ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                       ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                              ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                              ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                        ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                        ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                            ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                 ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_1gd1                              ; Untyped        ;
++------------------------------------+----------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -357,13 +361,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                      ; Value                ;
 +-------------------------------------------+----------------------+
 ; Number of entity instances                ; 1                    ;
-; Entity Instance                           ; altsyncram:mem_rtl_0 ;
-;     -- OPERATION_MODE                     ; DUAL_PORT            ;
+; Entity Instance                           ; altsyncram:ram_rtl_0 ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT          ;
 ;     -- WIDTH_A                            ; 16                   ;
 ;     -- NUMWORDS_A                         ; 65536                ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED         ;
-;     -- WIDTH_B                            ; 16                   ;
-;     -- NUMWORDS_B                         ; 65536                ;
+;     -- WIDTH_B                            ; 1                    ;
+;     -- NUMWORDS_B                         ; 1                    ;
 ;     -- ADDRESS_REG_B                      ; CLOCK1               ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED         ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                 ;
@@ -376,17 +380,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 51                          ;
+; boundary_port         ; 50                          ;
 ; cycloneiii_ff         ; 3                           ;
-;     ENA               ; 3                           ;
-; cycloneiii_lcell_comb ; 104                         ;
-;     normal            ; 104                         ;
-;         3 data inputs ; 16                          ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 112                         ;
+;     normal            ; 112                         ;
+;         3 data inputs ; 24                          ;
 ;         4 data inputs ; 88                          ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.21                        ;
+; Average LUT depth     ; 2.18                        ;
 +-----------------------+-----------------------------+
 
 
@@ -405,7 +409,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 27 21:26:03 2022
+    Info: Processing started: Tue May 10 15:26:40 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 16bAccumulator -c 16bAccumulator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -421,58 +425,80 @@ Info (12021): Found 1 design units, including 1 entities, in source file se16.v
     Info (12023): Found entity 1: se16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ze16.v
     Info (12023): Found entity 1: ze16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze16.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memory.v
+    Info (12023): Found entity 1: memory File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file tb_memory.v
+    Info (12023): Found entity 1: tb_memory File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_memory.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file blockmemorycontrol.v
+    Info (12023): Found entity 1: MIPS_control_unit File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/BlockMemoryControl.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file connected_control_memory.v
+    Info (12023): Found entity 1: connected_control_memory File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/connected_control_memory.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_connected_control_memory.v
+    Info (12023): Found entity 1: tb_connected_control_memory File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_connected_control_memory.v Line: 1
 Info (12127): Elaborating entity "mem16" for the top level hierarchy
-Warning (276027): Inferred dual-clock RAM node "mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (10850): Verilog HDL warning at mem16.v(12): number of words (8) in memory file does not match the number of elements in the address range [0:65535] File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v Line: 12
 Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "mem_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
         Info (286033): Parameter WIDTH_A set to 16
         Info (286033): Parameter WIDTHAD_A set to 16
         Info (286033): Parameter NUMWORDS_A set to 65536
-        Info (286033): Parameter WIDTH_B set to 16
-        Info (286033): Parameter WIDTHAD_B set to 16
-        Info (286033): Parameter NUMWORDS_B set to 65536
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_PORT_A set to OLD_DATA
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-Info (12130): Elaborated megafunction instantiation "altsyncram:mem_rtl_0"
-Info (12133): Instantiated megafunction "altsyncram:mem_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+        Info (286033): Parameter INIT_FILE set to db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif
+Info (12130): Elaborated megafunction instantiation "altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
     Info (12134): Parameter "WIDTH_A" = "16"
     Info (12134): Parameter "WIDTHAD_A" = "16"
     Info (12134): Parameter "NUMWORDS_A" = "65536"
-    Info (12134): Parameter "WIDTH_B" = "16"
-    Info (12134): Parameter "WIDTHAD_B" = "16"
-    Info (12134): Parameter "NUMWORDS_B" = "65536"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
-    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_PORT_A" = "OLD_DATA"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k6e1.tdf
-    Info (12023): Found entity 1: altsyncram_k6e1 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/altsyncram_k6e1.tdf Line: 31
+    Info (12134): Parameter "INIT_FILE" = "db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1gd1.tdf
+    Info (12023): Found entity 1: altsyncram_1gd1 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/altsyncram_1gd1.tdf Line: 33
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/16bAccumulator.ram0_mem16_70ac2bf.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_rsa.tdf
     Info (12023): Found entity 1: decode_rsa File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/decode_rsa.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_k8a.tdf
+    Info (12023): Found entity 1: decode_k8a File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/decode_k8a.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qob.tdf
     Info (12023): Found entity 1: mux_qob File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/db/mux_qob.tdf Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 286 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 35 input pins
+Info (21057): Implemented 293 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 107 logic cells
+    Info (21061): Implemented 115 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Wed Apr 27 21:26:16 2022
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4901 megabytes
+    Info: Processing ended: Tue May 10 15:28:23 2022
+    Info: Elapsed time: 00:01:43
+    Info: Total CPU time (on all processors): 00:01:59
 
 

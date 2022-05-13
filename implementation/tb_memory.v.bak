@@ -1,0 +1,13 @@
+
+
+
+
+
+     initial begin
+         clk = 0;
+         addr = 'h000;
+         din = 'h1111;
+
+         #PERIOD;
+         addr = 'h001;
+     end
