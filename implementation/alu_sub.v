@@ -26,7 +26,7 @@ mux2b16 ALUSrcA(
 	.Out(AOut)
 );
 
-CSSE_Project_3_Bit_Mux ALUSrcB(
+mux3b16 ALUSrcB(
 	.a(2'b10),
 	.b(SE),
 	.c(MDR),

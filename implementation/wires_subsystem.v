@@ -23,7 +23,7 @@ module wires_subsystem(
 	
 	ze16 ZeroExtend (.In(IR), .Out(ZE));
 	
-	CSSE232_Project_3_Bit_Mux AccSource(.a(EightShift), .b(MDR), .c(MemData), .d(SE), .e(ALU), .sel(AccSrc), .out(MuxOut));
+	mux3b16 AccSource(.a(EightShift), .b(MDR), .c(MemData), .d(SE), .e(ALU), .sel(AccSrc), .out(MuxOut));
 	
 	reg16 Acc (.In(MuxOut), .E(AccWrite), .reset(reset), .CLK(CLK), .Out(AccOutput));
 	

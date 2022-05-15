@@ -1,34 +1,78 @@
 module accumulatorFull
 	//Control Inputs
-	input [0:0] CLK
+	input [15:0] PCWrite,
+	input [15:0] Branch,
+	input [15:0] bneOrbeq,
+	input [15:0] PCSrc,
+	
+	input [15:0] MemAddr,
+	input [15:0] MemData,
+	input [15:0] MemWrite,
+	
+	input [15:0] AccWrite,
+	input [15:0] SpWrite,
+	
+	input [15:0] ALUSrcA,
+	input [15:0] ALUSrcB,
+	input [15:0] ALUOp,
+
+
+
+	//Clock Inputs
+	input [15:0] reset,
+	input [0:0] CLK,
+	
+	
+	wire [15:0] pcvalue,
+	
+	wire [15:0] MemO,
+	
+	wire [15:0] acco,
+	wire [15:0] apo,
+	wire [15:0] seo,
+	wire [15:0] sel,
+	wire [15:0] zeo,
+	
+	wire [15:0] aluResult,
+	wire [15:0] aluOut,
+	wire [15:0] zero,
 );
 
 PC pcs(
-	.PCWrite(),
+	.PCWrite(PCWrite),
 	.Zero(zero),
-	.Branch(),
-	.bneOrbeq(),
+	.Branch(Branch),
+	.bneOrbeq(bneOrbeq),
 	.PCInA(aluResult),
 	.PCInB(),
 	.PCInC(aluOut),
-	.PCSrc(),
+	.PCSrc(PCSrc),
 	.CLK(CLK),
-	.reset(),
+	.reset(reset),
 	.PCOut(pcvalue)
 );
 
-//MemorySubsystem
+Memory memsub(
+	.PC(pcvalue),
+	.SELeft(sel),
+	.ALUOut(aluOut),
+	.MemAddr(MemAddr),
+	.MemWrite(MemWrite),
+	.CLK(CLK),
+	.reset(reset),
+	.Data(MemO)
+);
 
 
 wires_subsystem wiresub(
-	.IR(),
-	.MemData(),
+	.IR(IRO),
+	.MemData(MemO),
 	.ALU(aluResult),
-	.reset(),
+	.reset(reset),
 	.CLK(CLK),
 	.MDR(),
-	.AccWrite(),
-	.SpWrite(),
+	.AccWrite(AccWrite),
+	.SpWrite(SpWrite),
 	.AccOutput(acco),
 	.SpOutPut(spo),
 	.SE(seo),
@@ -45,9 +89,9 @@ alu_sub alus(
 	.SE(seo),
 	.ZE(zeo),
 	.SL1(sel),
-	.SrcA(),
-	.SrcB(),
-	.ALUOP(),
+	.SrcA(ALUSrcA),
+	.SrcB(ALUSrcB),
+	.ALUOP(ALUOp),
 	.CLK(CLK),
 	.Out(aluResult),
 	.aluOut(aluOut),
