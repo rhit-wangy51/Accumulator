@@ -92,3 +92,6 @@ xst/
 _ngo/
 _xmsgs/
 work/
+
+*implementation/db/
+
