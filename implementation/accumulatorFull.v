@@ -26,7 +26,9 @@ module accumulatorFull(
 //PC output
 wire [15:0] pcvalue;
 //Memory	outputs
+//wire [15:0] IRo;
 wire [15:0] MemO;
+wire [15:0] memMDRO;
 //Wires outputs
 wire [15:0] acco;
 wire [15:0] apo;
@@ -65,12 +67,16 @@ Memory memsub(
 	.MemWrite(MemWrite),
 	.CLK(CLK),
 	.reset(reset),
-	.Data(MemO)
+	.IROut(IRo),
+	.Data(MemO),
+	.MDR(memMDRO)
 );
 
 
 wires_subsystem wiresub(
+	.IR(IRo)
 	.MemData(MemO),
+	.MDR(memMDRO)
 	.ALU(aluResult),
 	.reset(reset),
 	.CLK(CLK),

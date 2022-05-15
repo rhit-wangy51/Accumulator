@@ -10,6 +10,7 @@ module wires_subsystem(
 	input [0:0] SpWrite,
 	output [15:0] AccOutput,
 	output [15:0] SpOutput,
+	output [15:0] MDROutPut,
 	output [15:0] SE,
 	output [15:0] SELeft,
 	output [15:0] ZE);
