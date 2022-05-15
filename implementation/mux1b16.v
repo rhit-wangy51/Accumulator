@@ -1,8 +1,8 @@
 module mux1b16(
-	input [15:0] A,
-	input [15:0] B,
+	input [0:0] A,
+	input [0:0] B,
 	input [0:0] OP,
-	output reg [15:0] Out
+	output reg [0:0] Out
 );
 
 
