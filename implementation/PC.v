@@ -4,7 +4,7 @@ module PC(
 	input [0:0] Branch,
 	input [0:0] bneOrbeq,
 	input [15:0] PCInA,
-	input [15:0] PCInB,
+	input [15:0] ZE,
 	input [15:0] PCInC,
 	input	[1:0]	PCSrc,
 	input [0:0] CLK,
@@ -14,6 +14,12 @@ module PC(
 
 wire [15:0] mux16_out;
 wire [0:0] mux1_out;
+wire [15:0] PCInB
+
+shift_left(
+	.in(ZE),
+	.out(PCInB)
+);
 
 mux2b16 src_mux(
 	.A(PCInA),
