@@ -40,7 +40,6 @@ alu16 ALUC(
 	.A(AOut),
 	.B(BOut),
 	.OP(ALUOp),
-	.CLK(CLK),
 	.Zero(Zero),
 	.Out(Out)
 );

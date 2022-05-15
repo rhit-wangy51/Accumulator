@@ -1,32 +1,33 @@
 module accumulatorFull(
-	//Control Inputs
-	input [15:0] PCWrite,
-	input [15:0] Branch,
-	input [15:0] bneOrbeq,
-	input [15:0] PCSrc,
-	//Memory control
-	input [15:0] MemAddr,
-	input [15:0] MemData,
-	input [15:0] MemWrite,
-	//Wire control
-	input [15:0] AccWrite,
-	input [15:0] SpWrite,
-	//ALU Control
-	input [15:0] ALUSrcA,
-	input [15:0] ALUSrcB,
-	input [15:0] ALUOp,
-
-
+	input [15:0] memIn,
 
 	//Clock Inputs
 	input [15:0] reset,
 	input [0:0] CLK,
+	
+	output [15:0] Output
+	
 );
+
+//Control wires
+	//PC
+wire [15:0] PCWrite,
+wire [15:0] Branch,
+wire [15:0] bneOrbeq,
+wire [15:0] PCSrc,
+	//Wire
+wire [15:0] AccWrite,
+wire [15:0] SpWrite,
+	//ALU
+wire [15:0] ALUSrcA,
+wire [15:0] ALUSrcB,
+wire [15:0] ALUOp,
+
 
 //PC output
 wire [15:0] pcvalue;
 //Memory	outputs
-//wire [15:0] IRo;
+wire [15:0] IRo;
 wire [15:0] MemO;
 wire [15:0] memMDRO;
 //Wires outputs
@@ -44,44 +45,72 @@ wire [15:0] zero;
 
 
 PC pcs(
-	.PCWrite(PCWrite),
-	.Zero(zero),
-	.Branch(Branch),
-	.bneOrbeq(bneOrbeq),
+	//Input
+	.Zero(zero,
 	.PCInA(aluResult),
 	.ZE(zeo),
 	.PCInC(aluOut),
+	//Control
+	.PCWrite(PCWrite),
+	.Branch(Branch),
+	.bneOrbeq(bneOrbeq),
 	.PCSrc(PCSrc),
+	//Clock
 	.CLK(CLK),
 	.reset(reset),
+	//Output
 	.PCOut(pcvalue)
 );
 
 Memory memsub(
+	//Sytem Input
+	.Input(memIn)
+	//Wire Input
 	.PC(pcvalue),
 	.SELeft(sel),
 	.ALUOut(aluOut),
 	.ACC(acco),
-	.MemAddr(MemAddr),
-	.MemData(MemData),
-	.MemWrite(MemWrite),
+	//Clock
 	.CLK(CLK),
 	.reset(reset),
+	
+	//Control Outputs
+		//PC
+	.PCWrite(PCWrite),
+	.Branch(Branch),
+	.bneOrbeq(bneOrbeq),
+	.PCSrc(PCSrc),
+		//Wire
+	.AccWrite(AccWrite),
+	.SpWrite(SpWrite),
+		//ALU
+	.ALUSrcA(ALUSrcA),
+	.ALUSrcB(ALUArcB),
+	.ALUOp(ALUOp),
+	
+	//Wire Output
 	.IROut(IRo),
 	.Data(MemO),
-	.MDR(memMDRO)
+	.MDR(memMDRO),
+	
+	//System Output
+	.Output(Output)
 );
 
 
 wires_subsystem wiresub(
+	//Input
 	.IR(IRo)
 	.MemData(MemO),
 	.MDR(memMDRO)
 	.ALU(aluResult),
+	//Clock
 	.reset(reset),
 	.CLK(CLK),
+	//Control
 	.AccWrite(AccWrite),
 	.SpWrite(SpWrite),
+	//Output
 	.AccOutput(acco),
 	.SpOutPut(spo),
 	.MDROutPut(mdro),
@@ -92,6 +121,7 @@ wires_subsystem wiresub(
 
 
 alu_sub alus(
+	//Input
 	.PC(pcvalue),
 	.ACC(acco),
 	.SP(spo),
@@ -99,10 +129,13 @@ alu_sub alus(
 	.SE(seo),
 	.ZE(zeo),
 	.SL1(sel),
+	//Control
 	.SrcA(ALUSrcA),
 	.SrcB(ALUSrcB),
 	.ALUOP(ALUOp),
+	//Clock
 	.CLK(CLK),
+	//Output
 	.Out(aluResult),
 	.aluOut(aluOut),
 	.Zero(zero)
