@@ -1,0 +1,10 @@
+# Compile of tb_connected_control_memory.v was successful.
+# Compile of connected_control_memory.v was successful.
+# Compile of BlockMemoryControl.v was successful.
+# Compile of memory.v was successful.
+# 4 compiles, 0 failed with no errors.
+# Load canceled
+restart -f
+# No Design Loaded!
+# Load canceled
+# Load canceled

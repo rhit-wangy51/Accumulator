@@ -43,7 +43,7 @@ always #HALF_PERIOD clk = ~clk;
 initial begin
 	$display("Initializing the UUT");
 	
-	clk = 0;
+	clk = 1;
 	PC = 'h004;
 	failures = 0;
 	counter = 0;

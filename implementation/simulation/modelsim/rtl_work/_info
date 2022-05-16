@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/simulation/modelsim
+vmem16
+!s110 1652276614
+!i10b 1
+!s100 <>G82?cD16Ije1iDA:`@:2
+I687f2D2DR5D`_3EchgQ5o0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1652192246
+8D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v
+FD:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1652276614.000000
+!s107 D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation|D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation
+tCvgOpt 0
