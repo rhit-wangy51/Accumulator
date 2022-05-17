@@ -2,8 +2,8 @@ module accumulatorFull(
 	input [15:0] memIn,
 
 	//Clock Inputs
-	input [15:0] reset,
-	input [0:0] CLK,
+	input [0:0] reset,
+	input CLK,
 	
 	output [15:0] Output
 	
@@ -11,17 +11,18 @@ module accumulatorFull(
 
 //Control wires
 	//PC
-wire [15:0] PCWrite,
-wire [15:0] Branch,
-wire [15:0] bneOrbeq,
-wire [15:0] PCSrc,
+wire [15:0] PCWrite;
+wire [15:0] Branch;
+wire [15:0] bneOrbeq;
+wire [15:0] PCSrc;
 	//Wire
-wire [15:0] AccWrite,
-wire [15:0] SpWrite,
+wire [15:0] ACCSrc;
+wire [15:0] AccWrite;
+wire [15:0] SpWrite;
 	//ALU
-wire [15:0] ALUSrcA,
-wire [15:0] ALUSrcB,
-wire [15:0] ALUOp,
+wire [15:0] ALUSrcA;
+wire [15:0] ALUSrcB;
+wire [15:0] ALUOp;
 
 
 //PC output
@@ -46,7 +47,7 @@ wire [15:0] zero;
 
 PC pcs(
 	//Input
-	.Zero(zero,
+	.Zero(zero),
 	.PCInA(aluResult),
 	.ZE(zeo),
 	.PCInC(aluOut),
@@ -62,14 +63,14 @@ PC pcs(
 	.PCOut(pcvalue)
 );
 
-Memory memsub(
+AccMemory memsub(
 	//Sytem Input
-	.Input(memIn)
+	.IOIn(memIn)
 	//Wire Input
 	.PC(pcvalue),
-	.SELeft(sel),
-	.ALUOut(aluOut),
 	.ACC(acco),
+	.IR(sel),
+	.ALUOut(aluOut),
 	//Clock
 	.CLK(CLK),
 	.reset(reset),
@@ -78,23 +79,24 @@ Memory memsub(
 		//PC
 	.PCWrite(PCWrite),
 	.Branch(Branch),
-	.bneOrbeq(bneOrbeq),
+	.BneOrBeq(bneOrbeq),
 	.PCSrc(PCSrc),
 		//Wire
-	.AccWrite(AccWrite),
-	.SpWrite(SpWrite),
+	.ACCSrc(AccSrc),
+	.ACCWrite(AccWrite),
+	.SPWrite(SpWrite),
 		//ALU
 	.ALUSrcA(ALUSrcA),
 	.ALUSrcB(ALUArcB),
 	.ALUOp(ALUOp),
 	
 	//Wire Output
-	.IROut(IRo),
+	.IRROut(IRo),
 	.Data(MemO),
-	.MDR(memMDRO),
+	.MDROut(memMDRO),
 	
 	//System Output
-	.Output(Output)
+	.IOOut(Output)
 );
 
 
@@ -108,6 +110,7 @@ wires_subsystem wiresub(
 	.reset(reset),
 	.CLK(CLK),
 	//Control
+	.AccSrc(ACCSrc),
 	.AccWrite(AccWrite),
 	.SpWrite(SpWrite),
 	//Output
