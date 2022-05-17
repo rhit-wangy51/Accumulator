@@ -1,4 +1,4 @@
-module mux1b1(
+module mux1b16(
 	input [0:0] A,
 	input [0:0] B,
 	input [0:0] OP,

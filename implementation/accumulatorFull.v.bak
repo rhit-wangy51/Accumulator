@@ -1,0 +1,39 @@
+module accumulatorFull(
+	input [0:0] CLK
+);
+
+
+
+alus alu_sub(
+	.PC(pcvalue),
+	.ACC(),
+	.SP(),
+	.MDR(),
+	.SE(),
+	.ZE(),
+	.SL1(),
+	.SrcA(),
+	.SrcB(),
+	.ALUOP(),
+	.CLK(CLK),
+	.Out(aluResult),
+	.aluOut(aluOut),
+	.Zero(zero)
+);
+
+pcs PC(
+	.PCWrite(),
+	.Zero(zero),
+	.Branch(),
+	.bneOrbeq(),
+	.PCInA(aluResult),
+	.PCInB(),
+	.PCInC(aluOut),
+	.PCSrc(),
+	.CLK(CLK),
+	.reset(),
+	.PCOut(pcvalue)
+);
+
+
+endmodule

@@ -5,9 +5,11 @@ module memory
 #(parameter DATA_WIDTH=16, parameter ADDR_WIDTH=10)
 (
 	input [(DATA_WIDTH-1):0] data,
+	input [(DATA_WIDTH-1):0] IOIn,
 	input [(ADDR_WIDTH-1):0] addr,
-	input we, clk,
-	output [(DATA_WIDTH-1):0] q
+	input we, CLK,
+	output [(DATA_WIDTH-1):0] q,
+	output reg [(DATA_WIDTH-1):0] IOOut
 );
 
 	// Declare the RAM variable
@@ -20,11 +22,14 @@ module memory
     $readmemh("memory.txt", ram);
 	end
 
-	always @ (posedge clk) begin
+	always @ (posedge CLK) begin
 		// Write
-		if (we)
+		if (we) begin
+			if( addr == 10'h07fc)
+				IOOut <= ram[IOIn];
 			ram[addr] <= data;
-
+		end
+		
 		addr_reg <= addr;
 	end
 

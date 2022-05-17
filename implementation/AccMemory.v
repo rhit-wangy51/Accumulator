@@ -1,11 +1,11 @@
-module connected_control_memory(
+module AccMemory(
 	input CLK,
 	input [15:0] PC,
 	input [15:0] ACC,
 	input [15:0] IR,
 	input [15:0] ALUOut,
 	
-	Input [0:0] Reset,
+	input [0:0] Reset,
 	input [15:0] IOIn,
 	
 	
@@ -19,7 +19,7 @@ module connected_control_memory(
 	output [1:0] ALUOp,
 	output [1:0] BneOrBeq,
 	output [1:0] PCWrite,
-	output [1:0] Branch
+	output [1:0] Branch,
 	
 	output [15:0] IRROut,
 	output [15:0] MDROut,
@@ -28,10 +28,12 @@ module connected_control_memory(
 
 
 wire [15:0] memout;
-wire [1:0] MemAddr,
-wire [0:0] MemData,
-wire [0:0] MemWrite,
-wire [0:0] IRWrite,
+wire [15:0] memin;
+wire [15:0] addr;
+wire [1:0] MemAddr;
+wire [0:0] MemData;
+wire [0:0] MemWrite;
+wire [0:0] IRWrite;
 
 
 parameter RA = 16'h07fe;
@@ -39,23 +41,23 @@ parameter RA = 16'h07fe;
 
 control control_inst
 (
-	.Opcode(Opcode_sig) ,	// input [5:0] Opcode_sig
-	.CLK(CLK_sig) ,	// input  CLK_sig
-	.Reset(Reset_sig) ,	// input  Reset_sig
-	.PCSrc(PCSrc_sig) ,	// output [1:0] PCSrc_sig
-	.MemAddr(MemAddr_sig) ,	// output [1:0] MemAddr_sig
-	.MemData(MemData_sig) ,	// output [0:0] MemData_sig
-	.MemWrite(MemWrite_sig) ,	// output [0:0] MemWrite_sig
-	.SPWrite(SPWrite_sig) ,	// output [0:0] SPWrite_sig
-	.ACCSrc(ACCSrc_sig) ,	// output [2:0] ACCSrc_sig
-	.ACCWrite(ACCWrite_sig) ,	// output [0:0] ACCWrite_sig
-	.ALUSrcA(ALUSrcA_sig) ,	// output [1:0] ALUSrcA_sig
-	.ALUSrcB(ALUSrcB_sig) ,	// output [2:0] ALUSrcB_sig
-	.Zero(Zero_sig) ,	// output [1:0] Zero_sig
-	.ALUOp(ALUOp_sig) ,	// output [1:0] ALUOp_sig
-	.BneOrBeq(BneOrBeq_sig) ,	// output [1:0] BneOrBeq_sig
-	.PCWrite(PCWrite_sig) ,	// output [1:0] PCWrite_sig
-	.Branch(Branch_sig) 	// output [1:0] Branch_sig
+	.Opcode(memout[15:10]) ,	// input [5:0] Opcode_sig
+	.CLK(CLK) ,	// input  CLK_sig
+	.Reset(Reset) ,	// input  Reset_sig
+	.PCSrc(PCSrc) ,	// output [1:0] PCSrc_sig
+	.MemAddr(MemAddr) ,	// output [1:0] MemAddr_sig
+	.MemData(MemData) ,	// output [0:0] MemData_sig
+	.MemWrite(MemWrite) ,	// output [0:0] MemWrite_sig
+	.SPWrite(SPWrite) ,	// output [0:0] SPWrite_sig
+	.ACCSrc(ACCSrc) ,	// output [2:0] ACCSrc_sig
+	.ACCWrite(ACCWrite) ,	// output [0:0] ACCWrite_sig
+	.ALUSrcA(ALUSrcA) ,	// output [1:0] ALUSrcA_sig
+	.ALUSrcB(ALUSrcB) ,	// output [2:0] ALUSrcB_sig
+	.Zero(Zero) ,	// output [1:0] Zero_sig
+	.ALUOp(ALUOp) ,	// output [1:0] ALUOp_sig
+	.BneOrBeq(BneOrBeq) ,	// output [1:0] BneOrBeq_sig
+	.PCWrite(PCWrite) ,	// output [1:0] PCWrite_sig
+	.Branch(Branch) 	// output [1:0] Branch_sig
 );
 
 defparam control_inst.Fetch = 0;
@@ -81,20 +83,54 @@ defparam control_inst.Add = 19;
 defparam control_inst.Slti = 20;
 defparam control_inst.Loadui = 21;
 
+mux2b16 mux2b16_inst
+(
+	.A(PC) ,	// input [15:0] A_sig
+	.B(IR) ,	// input [15:0] B_sig
+	.C(16'hfffe) ,	// input [15:0] C_sig
+	.D(ALUOut) ,	// input [15:0] D_sig
+	.OP(MemAddr) ,	// input [1:0] OP_sig
+	.Out(memin) 	// output [15:0] Out_sig
+);
+
+mux1b16 mux1b16_inst
+(
+	.A(A_sig) ,	// input [0:0] A_sig
+	.B(B_sig) ,	// input [0:0] B_sig
+	.OP(MemData) ,	// input [0:0] OP_sig
+	.Out(addr) 	// output [0:0] Out_sig
+);
+
 memory memory_inst
 (
-	.data(data_sig) ,	// input [DATA_WIDTH-1:0] data_sig
-	.addr(addr_sig) ,	// input [ADDR_WIDTH-1:0] addr_sig
-	.we(we_sig) ,	// input  we_sig
-	.clk(clk_sig) ,	// input  clk_sig
-	.q(q_sig) 	// output [DATA_WIDTH-1:0] q_sig
+	.data(memin[9:0]) ,	// input [DATA_WIDTH-1:0] data_sig
+	.IOIn(IOIn) ,	// input [DATA_WIDTH-1:0] IOIn_sig
+	.addr(addr) ,	// input [ADDR_WIDTH-1:0] addr_sig
+	.we(MemWrite) ,	// input  we_sig
+	.CLK(CLK) ,	// input  clk_sig
+	.q(memout) ,	// output [DATA_WIDTH-1:0] q_sig
+	.IOOut(IOOut) 	// output [DATA_WIDTH-1:0] IOOut_sig
+);
+
+reg16 IR_inst
+(
+	.In(memout) ,	// input [15:0] In_sig
+	.E(IRWrite) ,	// input [0:0] E_sig
+	.reset(Reset) ,	// input [0:0] reset_sig
+	.CLK(CLK) ,	// input [0:0] CLK_sig
+	.Out(IROut) 	// output [15:0] Out_sig
+);
+
+reg16 MDR_inst
+(
+	.In(memout) ,	// input [15:0] In_sig
+	.E(1) ,	// input [0:0] E_sig
+	.reset(Reset) ,	// input [0:0] reset_sig
+	.CLK(CLK) ,	// input [0:0] CLK_sig
+	.Out(MDROut) 	// output [15:0] Out_sig
 );
 
 defparam memory_inst.DATA_WIDTH = 16;
 defparam memory_inst.ADDR_WIDTH = 10;
-
-always begin
-
-end
 
 endmodule

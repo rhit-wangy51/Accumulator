@@ -2,13 +2,12 @@ module alu16(
 	input [15:0] A,
 	input [15:0] B,
 	input [2:0] OP,
-	input [0:0] CLK,
 	output reg [15:0] Out,
 	output reg [0:0] Zero
 );
 
 
-always @ (posedge CLK) begin
+always @ (A, B, OP) begin
 	if(A == B)
 		Zero <= 1'b1;
 		

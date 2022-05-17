@@ -1,12 +1,12 @@
 module mux1b16(
-	input [0:0] A,
-	input [0:0] B,
+	input [15:0] A,
+	input [15:0] B,
 	input [0:0] OP,
-	output reg [0:0] Out
+	output reg [15:0] Out
 );
 
 
-always @(A, B, OP) begin
+always begin
 	if(OP==1'b0)
 		Out <= A; 
 	else
