@@ -12,11 +12,12 @@ else:
     exit()
 
 global_addr = 0xFF00
-text_addr = 0x0030
-label_dict = {};
+text_addr = 0x0000
+ra = 0xfffe
+label_dict = {"ra": 127};
 
 def getvalue(address):
-    return int((address - 0xFE00)/2)
+    return int((address - 0xFF00)/2)
 
 print("Loading the opcode table")
 with open('assember_table.json', "r") as infile:
@@ -40,33 +41,34 @@ with open(srcpath, 'r') as codefile:
       
         if(text_addr > 0x00FE):
             print("[Fatal Error] Text Data Overflow in line %d: %04x." 
-                  % (text_addr - 0x0030)/2, text_addr)
+                  % (text_addr - 0x0000)/2, text_addr)
             raise ValueError("[Fatal Error] Text Data Overflow in line %d: %04x." 
-                  % (text_addr - 0x0030)/2, text_addr)
+                  % (text_addr - 0x0000)/2, text_addr)
 
     print("[Success] Finished Addressing all Lables")
     print(label_dict)
 
 
-with open(srcpath, 'r') as codefile, open(dstpath, 'w') as ofile:
-    text_addr = 0x0030
+with open(srcpath, 'r') as codefile, open(dstpath, 'w') as ofile, open("%sd" % dstpath, 'w') as dfile:
+    text_addr = 0x0000
     # assemble the code into machine code
     for line in codefile:
         instruction = line.split()
         length = len(instruction)
         # translate the last arguement (must be a label or immediate)
         immediate = instruction[length - 1].lower()
-        if(immediate.isdigit() == False):
+        if(immediate.lstrip('+-').isdigit() == False):
             if(immediate in label_dict):
                 immediate = label_dict[immediate]
             else:
                 label_dict[immediate] = getvalue(global_addr)
                 immediate = getvalue(global_addr)
                 global_addr+=2
-        else:
+        elif(immediate.lstrip('+').isdigit() == True):
             immediate = int(immediate)
-    
-        
+        else:
+            immediate = int(immediate) + 256
+
         # translate the opcode
         opcode = instruction[0].lower()
         reserved = '000'
@@ -80,12 +82,12 @@ with open(srcpath, 'r') as codefile, open(dstpath, 'w') as ofile:
                 reserved = int((immediate - text_addr - 2)/2)
                 if(reserved > 0b111):
                     print("[Fatal Error] Instruction Immediate Overflow in line %d: %s." 
-                          % (text_addr - 0x0030)/2, line)
+                          % (text_addr - 0x0000)/2, line)
                     raise ValueError("[Fatal Error] Instruction Immediate Overflow in line %d: %s." 
-                          % (text_addr - 0x0030)/2, line)    
+                          % (text_addr - 0x0000)/2, line)
                 reserved = "{:3b}".format(reserved)              
                 immediate = instruction[1].lower()
-                if(immediate.isdigit() == False):
+                if(immediate.lstrip('+-').isdigit() == False):
                     if(immediate in label_dict):
                         immediate = label_dict[immediate]
                     else:
@@ -94,32 +96,35 @@ with open(srcpath, 'r') as codefile, open(dstpath, 'w') as ofile:
                         global_addr+=2
         elif(length != 2):
             print("[Fatal Error] Wrong format in line %d: %s." 
-                  % ((text_addr - 0x0030)/2, line))
+                  % ((text_addr - 0x0000)/2, line))
             raise ValueError("[Fatal Error] Wrong format in line %d: %s." 
-                  % ((text_addr - 0x0030)/2, line))
+                  % ((text_addr - 0x0000)/2, line))
     
         if(opcode in opcode_dict):
             opcode = opcode_dict[opcode]
         else:
             print("[Fatal Error] Wrong format in line %d: %s." 
-                  % ((text_addr - 0x0030)/2, line))
+                  % ((text_addr - 0x0000)/2, line))
             raise ValueError("[Fatal Error] Wrong format in line %d: %s." 
-                  % ((text_addr - 0x0030)/2, line))
+                  % ((text_addr - 0x0000)/2, line))
     
         # write into the obj file
         #print(" 0x{:04x}:  {} {:08b} {}\t {}".format(text_addr, opcode, immediate, reserved, line))
-        ofile.write(" 0x{:04x}:  {} {:08b} {}\t {}".format(text_addr, opcode, immediate, reserved, line))
+        dfile.write(" 0x{:04x}:  {} {:08b} {}\t {}".format(text_addr, opcode, immediate, reserved, line))
+        #print("{}{:08b}{}".format(opcode, immediate, reserved))
+        ofile.write("{:04x}\n".format(int("{}{:08b}{}".format(opcode, immediate, reserved), 2)))
         text_addr+=2
-    
         # check if the data overflow
         # 0xFFFE is reserved for return address
         if(global_addr > 0xFFFC):
             print("[Fatal Error] Global Data Overflow in line %d: %04x." 
-                  % (text_addr - 0x0030)/2, global_addr)
+                  % (text_addr - 0x0000)/2, global_addr)
             raise ValueError("[Fatal Error] Global Data Overflow in line %d: %04x." 
-                  % (text_addr - 0x0030)/2, global_addr)
+                  % (text_addr - 0x0000)/2, global_addr)
     
     print("[Success] Finished Assembling all codes")
+    print(label_dict)
+
 
 
 
