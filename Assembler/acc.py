@@ -13,8 +13,9 @@ else:
 
 global_addr = 0xFF00
 text_addr = 0x0000
-ra = 0xfffe
-label_dict = {"ra": 127};
+ra = 0xFFFE
+magicio = 0xFFFC
+label_dict = {"ra": 127, "io": 126}
 
 def getvalue(address):
     return int((address - 0xFF00)/2)
@@ -85,7 +86,7 @@ with open(srcpath, 'r') as codefile, open(dstpath, 'w') as ofile, open("%sd" % d
                           % (text_addr - 0x0000)/2, line)
                     raise ValueError("[Fatal Error] Instruction Immediate Overflow in line %d: %s." 
                           % (text_addr - 0x0000)/2, line)
-                reserved = "{:3b}".format(reserved)              
+                reserved = "{:03b}".format(reserved)          
                 immediate = instruction[1].lower()
                 if(immediate.lstrip('+-').isdigit() == False):
                     if(immediate in label_dict):
