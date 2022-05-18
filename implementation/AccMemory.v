@@ -15,7 +15,6 @@ module AccMemory(
 	output [0:0] ACCWrite,
 	output [1:0] ALUSrcA,
 	output [2:0] ALUSrcB,
-	output [1:0] Zero,
 	output [1:0] ALUOp,
 	output [1:0] BneOrBeq,
 	output [1:0] PCWrite,
@@ -53,7 +52,6 @@ control control_inst
 	.ACCWrite(ACCWrite) ,	// output [0:0] ACCWrite_sig
 	.ALUSrcA(ALUSrcA) ,	// output [1:0] ALUSrcA_sig
 	.ALUSrcB(ALUSrcB) ,	// output [2:0] ALUSrcB_sig
-	.Zero(Zero) ,	// output [1:0] Zero_sig
 	.ALUOp(ALUOp) ,	// output [1:0] ALUOp_sig
 	.BneOrBeq(BneOrBeq) ,	// output [1:0] BneOrBeq_sig
 	.PCWrite(PCWrite) ,	// output [1:0] PCWrite_sig
