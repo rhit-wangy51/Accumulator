@@ -92,7 +92,7 @@ AccMemory memsub(
 	
 	//Wire Output
 	.IRROut(IRo),
-	.Data(MemO),
+	.MemOut(MemO),
 	.MDROut(memMDRO),
 	
 	//System Output
