@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Failed - Tue May 17 12:49:52 2022
+Analysis & Synthesis Status : Failed - Wed May 18 10:31:21 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : 16bAccumulator
-Top-level Entity Name : mem16
+Top-level Entity Name : accumulatorFull
 Family : Cyclone IV E
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

@@ -1,2 +1,2 @@
-Info (10281): Verilog HDL Declaration information at alu_sub.v(14): object "aluOut" differs only in case from object "ALUOut" in the same scope File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 14
-Warning (10268): Verilog HDL information at mux3b16.v(9): always construct contains both blocking and non-blocking assignments File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v Line: 9
+Info (10281): Verilog HDL Declaration information at alu_sub.v(14): object "aluOut" differs only in case from object "ALUOut" in the same scope File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 14
+Warning (10268): Verilog HDL information at mux3b16.v(9): always construct contains both blocking and non-blocking assignments File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v Line: 9
