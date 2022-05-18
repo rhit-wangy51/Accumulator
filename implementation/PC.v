@@ -14,9 +14,9 @@ module PC(
 
 wire [15:0] mux16_out;
 wire [0:0] mux1_out;
-wire [15:0] PCInB
+wire [15:0] PCInB;
 
-shift_left(
+shift_left zel(
 	.in(ZE),
 	.out(PCInB)
 );

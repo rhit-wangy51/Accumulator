@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 16bAccumulator
-Tue May 17 12:49:52 2022
+Wed May 18 10:31:21 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,8 +10,27 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Parameter Settings for User Entity Instance: AccMemory:memsub
+  6. Parameter Settings for User Entity Instance: AccMemory:memsub|control:control_inst
+  7. Parameter Settings for User Entity Instance: AccMemory:memsub|memory:memory_inst
+  8. Port Connectivity Checks: "alu_sub:alus|reg16:ALUOut"
+  9. Port Connectivity Checks: "alu_sub:alus|alu16:ALUC"
+ 10. Port Connectivity Checks: "alu_sub:alus|mux3b16:ALUSrcB"
+ 11. Port Connectivity Checks: "alu_sub:alus|mux2b16:ALUSrcA"
+ 12. Port Connectivity Checks: "alu_sub:alus"
+ 13. Port Connectivity Checks: "wires_subsystem:wiresub|mux3b16:AccSource"
+ 14. Port Connectivity Checks: "wires_subsystem:wiresub"
+ 15. Port Connectivity Checks: "AccMemory:memsub|reg16:MDR_inst"
+ 16. Port Connectivity Checks: "AccMemory:memsub|reg16:IR_inst"
+ 17. Port Connectivity Checks: "AccMemory:memsub|memory:memory_inst"
+ 18. Port Connectivity Checks: "AccMemory:memsub|mux1b16:mux1b16_inst"
+ 19. Port Connectivity Checks: "AccMemory:memsub|mux2b16:mux2b16_inst"
+ 20. Port Connectivity Checks: "AccMemory:memsub|control:control_inst"
+ 21. Port Connectivity Checks: "AccMemory:memsub"
+ 22. Port Connectivity Checks: "PC:pcs|mux2b16:src_mux"
+ 23. Port Connectivity Checks: "PC:pcs"
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,10 +56,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue May 17 12:49:52 2022           ;
+; Analysis & Synthesis Status        ; Failed - Wed May 18 10:31:21 2022           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; 16bAccumulator                              ;
-; Top-level Entity Name              ; mem16                                       ;
+; Top-level Entity Name              ; accumulatorFull                             ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -59,7 +78,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; mem16              ; 16bAccumulator     ;
+; Top-level entity name                                            ; accumulatorFull    ; 16bAccumulator     ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,77 +174,369 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AccMemory:memsub ;
++----------------+------------------+---------------------------+
+; Parameter Name ; Value            ; Type                      ;
++----------------+------------------+---------------------------+
+; RA             ; 0000011111111110 ; Unsigned Binary           ;
++----------------+------------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AccMemory:memsub|control:control_inst ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; Fetch          ; 0     ; Signed Integer                                            ;
+; Decode         ; 1     ; Signed Integer                                            ;
+; Load           ; 2     ; Signed Integer                                            ;
+; Addi           ; 3     ; Signed Integer                                            ;
+; Save           ; 4     ; Signed Integer                                            ;
+; Loadi          ; 5     ; Signed Integer                                            ;
+; Jal            ; 6     ; Signed Integer                                            ;
+; Ori            ; 7     ; Signed Integer                                            ;
+; And            ; 8     ; Signed Integer                                            ;
+; Slt            ; 9     ; Signed Integer                                            ;
+; SwOrLw         ; 10    ; Signed Integer                                            ;
+; Lw             ; 11    ; Signed Integer                                            ;
+; Sw             ; 12    ; Signed Integer                                            ;
+; Or             ; 13    ; Signed Integer                                            ;
+; Beq            ; 14    ; Signed Integer                                            ;
+; Sub            ; 15    ; Signed Integer                                            ;
+; Bne            ; 16    ; Signed Integer                                            ;
+; Jump           ; 17    ; Signed Integer                                            ;
+; Ms             ; 18    ; Signed Integer                                            ;
+; Add            ; 19    ; Signed Integer                                            ;
+; Slti           ; 20    ; Signed Integer                                            ;
+; Loadui         ; 21    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AccMemory:memsub|memory:memory_inst ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                                          ;
+; ADDR_WIDTH     ; 10    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "alu_sub:alus|reg16:ALUOut" ;
++-------+-------+----------+----------------------------+
+; Port  ; Type  ; Severity ; Details                    ;
++-------+-------+----------+----------------------------+
+; E     ; Input ; Info     ; Stuck at GND               ;
+; reset ; Input ; Info     ; Stuck at GND               ;
++-------+-------+----------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_sub:alus|alu16:ALUC"                                                                                                                  ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                    ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; OP   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "OP[2..1]" will be connected to GND. ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_sub:alus|mux3b16:ALUSrcB"                                                                                                                                                    ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; a     ; Input ; Warning  ; Input port expression (2 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..2]" will be connected to GND.                                      ;
+; a[15] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
+; a[14] ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; sel   ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_sub:alus|mux2b16:ALUSrcA"                                                                                                                                                   ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; OP   ; Input ; Warning  ; Input port expression (3 bits) is wider than the input port (2 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; D    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_sub:alus"                                                                                                                                                            ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                                 ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SP    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "SP[15..1]" will be connected to GND.                            ;
+; SrcA  ; Input  ; Warning  ; Input port expression (2 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "SrcA[2..2]" will be connected to GND.                            ;
+; SrcB  ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "SrcB[3..3]" will be connected to GND.                            ;
+; ALUOP ; Input  ; Warning  ; Input port expression (2 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "ALUOP[2..2]" will be connected to GND.                           ;
+; Zero  ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (16 bits) it drives.  The 15 most-significant bit(s) in the port expression will be connected to GND. ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "wires_subsystem:wiresub|mux3b16:AccSource" ;
++---------+-------+----------+------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                  ;
++---------+-------+----------+------------------------------------------+
+; a[7..0] ; Input ; Info     ; Stuck at GND                             ;
++---------+-------+----------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wires_subsystem:wiresub"                                                                                                                                                                       ;
++----------+---------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type    ; Severity         ; Details                                                                                                                                                                           ;
++----------+---------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; IR       ; Input   ; Warning          ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; SpOutPut ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                                                            ;
+; SpOutput ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                          ;
++----------+---------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AccMemory:memsub|reg16:MDR_inst"                                                                                                                                                  ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; E    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; E[0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AccMemory:memsub|reg16:IR_inst"                                                                                          ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                  ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Out  ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "Out[15..1]" have no fanouts ;
+; Out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                      ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AccMemory:memsub|memory:memory_inst"                                                                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "data[15..10]" will be connected to GND.                                   ;
+; addr ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (10 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AccMemory:memsub|mux1b16:mux1b16_inst"                                                                                                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Out  ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (16 bits) it drives.  The 15 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AccMemory:memsub|mux2b16:mux2b16_inst"                                                     ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; C[15..1]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; C[0]        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Out[15..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AccMemory:memsub|control:control_inst"                                                                      ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; IRWrite ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AccMemory:memsub"                                                                                                                                              ;
++---------------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type    ; Severity         ; Details                                                                                                                                      ;
++---------------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset         ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                       ;
+; ACCSrc        ; Output  ; Warning          ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "ACCSrc[2..1]" have no fanouts                    ;
+; ACCSrc        ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; ALUSrcB       ; Output  ; Warning          ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "ALUSrcB[2..1]" have no fanouts                   ;
+; ALUSrcB       ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; IRROut[15..8] ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; Data          ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                       ;
+; Reset         ; Input   ; Warning          ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++---------------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "PC:pcs|mux2b16:src_mux" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; D    ; Input ; Info     ; Stuck at GND             ;
++------+-------+----------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PC:pcs"                                                                                                                                                                               ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Zero     ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (1 bits) it drives.  The 15 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; PCWrite  ; Input ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
+; Branch   ; Input ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
+; bneOrbeq ; Input ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 17 12:49:45 2022
+    Info: Processing started: Wed May 18 10:31:12 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 16bAccumulator -c 16bAccumulator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file reg16.v
-    Info (12023): Found entity 1: reg16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v Line: 1
+    Info (12023): Found entity 1: reg16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mem16.v
-    Info (12023): Found entity 1: mem16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v Line: 1
+    Info (12023): Found entity 1: mem16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu16.v
-    Info (12023): Found entity 1: alu16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 1
+    Info (12023): Found entity 1: alu16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux1b16.v
-    Info (12023): Found entity 1: mux1b16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v Line: 1
+    Info (12023): Found entity 1: mux1b16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file se16.v
-    Info (12023): Found entity 1: se16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16.v Line: 1
+    Info (12023): Found entity 1: se16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ze16.v
-    Info (12023): Found entity 1: ze16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze16.v Line: 1
-Warning (10229): Verilog HDL Expression warning at memory.v(28): truncated literal to match 10 bits File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 28
+    Info (12023): Found entity 1: ze16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze16.v Line: 1
+Warning (10229): Verilog HDL Expression warning at memory.v(28): truncated literal to match 10 bits File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file memory.v
-    Info (12023): Found entity 1: memory File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 4
+    Info (12023): Found entity 1: memory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file tb_memory.v
-    Info (12023): Found entity 1: tb_memory File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_memory.v Line: 1
+    Info (12023): Found entity 1: tb_memory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_memory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file blockmemorycontrol.v
-    Info (12023): Found entity 1: MIPS_control_unit File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/BlockMemoryControl.v Line: 1
+    Info (12023): Found entity 1: MIPS_control_unit File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/BlockMemoryControl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file connected_control_memory.v
-    Info (12023): Found entity 1: connected_control_memory File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/connected_control_memory.v Line: 1
+    Info (12023): Found entity 1: connected_control_memory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/connected_control_memory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_connected_control_memory.v
-    Info (12023): Found entity 1: tb_connected_control_memory File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_connected_control_memory.v Line: 1
+    Info (12023): Found entity 1: tb_connected_control_memory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_connected_control_memory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control.v
-    Info (12023): Found entity 1: control File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 1
+    Info (12023): Found entity 1: control File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2b16.v
-    Info (12023): Found entity 1: mux2b16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v Line: 1
-Error (10170): Verilog HDL syntax error at accumulatorFull.v(15) near text: "wire";  expecting an identifier ("wire" is a reserved keyword ). Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 15
-Error (10170): Verilog HDL syntax error at accumulatorFull.v(49) near text: ",";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 49
-Error (10170): Verilog HDL syntax error at accumulatorFull.v(69) near text: ".";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 69
-Error (10170): Verilog HDL syntax error at accumulatorFull.v(104) near text: ".";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 104
-Error (10112): Ignored design unit "accumulatorFull" at accumulatorFull.v(1) due to previous errors File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file accumulatorfull.v
-Error (10170): Verilog HDL syntax error at alu_sub.v(17) near text: "wire";  expecting a direction. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 17
-Error (10112): Ignored design unit "alu_sub" at alu_sub.v(1) due to previous errors File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file alu_sub.v
+    Info (12023): Found entity 1: mux2b16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file accumulatorfull.v
+    Info (12023): Found entity 1: accumulatorFull File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_sub.v
+    Info (12023): Found entity 1: alu_sub File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux3b16.v
-    Info (12023): Found entity 1: mux3b16 File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v Line: 1
-Error (10170): Verilog HDL syntax error at PC.v(19) near text: "shift_left";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 19
-Error (10112): Ignored design unit "PC" at PC.v(1) due to previous errors File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file pc.v
+    Info (12023): Found entity 1: mux3b16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc.v
+    Info (12023): Found entity 1: PC File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shift_left.v
-    Info (12023): Found entity 1: shift_left File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/shift_left.v Line: 1
+    Info (12023): Found entity 1: shift_left File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/shift_left.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file wires_subsystem.v
-    Info (12023): Found entity 1: wires_subsystem File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 1
-Error (10228): Verilog HDL error at mux1b1.v(1): module "mux1b16" cannot be declared more than once File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b1.v Line: 1
-Info (10499): HDL info at mux1b16.v(1): see declaration for object "mux1b16" File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file mux1b1.v
+    Info (12023): Found entity 1: wires_subsystem File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux1b1.v
+    Info (12023): Found entity 1: mux1b1 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file accmemory.v
-    Info (12023): Found entity 1: AccMemory File: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 1
-Info (144001): Generated suppressed messages file D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/output_files/16bAccumulator.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 10 errors, 2 warnings
-    Error: Peak virtual memory: 4705 megabytes
-    Error: Processing ended: Tue May 17 12:49:52 2022
-    Error: Elapsed time: 00:00:07
-    Error: Total CPU time (on all processors): 00:00:18
+    Info (12023): Found entity 1: AccMemory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at accumulatorFull.v(85): created implicit net for "AccSrc" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 85
+Warning (10236): Verilog HDL Implicit Net warning at accumulatorFull.v(90): created implicit net for "ALUArcB" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 90
+Warning (10236): Verilog HDL Implicit Net warning at accumulatorFull.v(118): created implicit net for "spo" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 118
+Warning (10236): Verilog HDL Implicit Net warning at alu_sub.v(43): created implicit net for "ALUOp" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at AccMemory.v(96): created implicit net for "A_sig" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 96
+Warning (10236): Verilog HDL Implicit Net warning at AccMemory.v(97): created implicit net for "B_sig" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 97
+Warning (10236): Verilog HDL Implicit Net warning at AccMemory.v(119): created implicit net for "IROut" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 119
+Info (12127): Elaborating entity "accumulatorFull" for the top level hierarchy
+Info (12128): Elaborating entity "PC" for hierarchy "PC:pcs" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 64
+Info (12128): Elaborating entity "shift_left" for hierarchy "PC:pcs|shift_left:zel" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 22
+Info (12128): Elaborating entity "mux2b16" for hierarchy "PC:pcs|mux2b16:src_mux" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 31
+Info (12128): Elaborating entity "mux1b1" for hierarchy "PC:pcs|mux1b1:bnebeq_mux" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 38
+Info (12128): Elaborating entity "reg16" for hierarchy "PC:pcs|reg16:pc_reg" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 46
+Info (12128): Elaborating entity "AccMemory" for hierarchy "AccMemory:memsub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 100
+Warning (10034): Output port "IRROut" at AccMemory.v(23) has no driver File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 23
+Info (12128): Elaborating entity "control" for hierarchy "AccMemory:memsub|control:control_inst" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 59
+Warning (10230): Verilog HDL assignment warning at control.v(149): truncated value with size 32 to match size of target (2) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 149
+Warning (10230): Verilog HDL assignment warning at control.v(238): truncated value with size 32 to match size of target (2) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 238
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "PCSrc", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ALUSrcA", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ALUSrcB", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "MemAddr", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ALUOp", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ACCSrc", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "MemData", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "BneOrBeq", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "BneOrBeq[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "BneOrBeq[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "MemData[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ACCSrc[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ACCSrc[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ACCSrc[2]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUOp[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUOp[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "MemAddr[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "MemAddr[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcB[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcB[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcB[2]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcA[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcA[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "PCSrc[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "PCSrc[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (12128): Elaborating entity "mux1b16" for hierarchy "AccMemory:memsub|mux1b16:mux1b16_inst" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 100
+Info (12128): Elaborating entity "memory" for hierarchy "AccMemory:memsub|memory:memory_inst" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 111
+Warning (10850): Verilog HDL warning at memory.v(22): number of words (8) in memory file does not match the number of elements in the address range [0:1023] File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 22
+Info (12128): Elaborating entity "wires_subsystem" for hierarchy "wires_subsystem:wiresub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 123
+Warning (10034): Output port "MDROutPut" at wires_subsystem.v(13) has no driver File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 13
+Info (12128): Elaborating entity "se16" for hierarchy "wires_subsystem:wiresub|se16:SignExtend" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 21
+Info (12128): Elaborating entity "ze16" for hierarchy "wires_subsystem:wiresub|ze16:ZeroExtend" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 25
+Info (12128): Elaborating entity "mux3b16" for hierarchy "wires_subsystem:wiresub|mux3b16:AccSource" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 27
+Info (12128): Elaborating entity "alu_sub" for hierarchy "alu_sub:alus" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 145
+Info (12128): Elaborating entity "alu16" for hierarchy "alu_sub:alus|alu16:ALUC" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 46
+Warning (10270): Verilog HDL Case Statement warning at alu16.v(14): incomplete case statement has no default case item File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 14
+Warning (10240): Verilog HDL Always Construct warning at alu16.v(10): inferring latch(es) for variable "Zero", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Warning (10240): Verilog HDL Always Construct warning at alu16.v(10): inferring latch(es) for variable "Out", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[0]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[1]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[2]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[3]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[4]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[5]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[6]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[7]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[8]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[9]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[10]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[11]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[12]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[13]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[14]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[15]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Zero[0]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Error (12002): Port "SpOutPut" does not exist in macrofunction "wiresub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 123
+Error (12002): Port "Data" does not exist in macrofunction "memsub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 100
+Error (12002): Port "reset" does not exist in macrofunction "memsub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 100
+Warning (12241): 12 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/output_files/16bAccumulator.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 26 warnings
+    Error: Peak virtual memory: 4711 megabytes
+    Error: Processing ended: Wed May 18 10:31:21 2022
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/output_files/16bAccumulator.map.smsg.
+The suppressed messages can be found in C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/output_files/16bAccumulator.map.smsg.
 
 
