@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue May 10 15:28:32 2022
+Fitter Status : Successful - Thu May 19 10:12:45 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : 16bAccumulator
-Top-level Entity Name : mem16
+Top-level Entity Name : accumulatorFull
 Family : Cyclone IV E
-Device : EP4CE55F23C6
+Device : EP4CE6E22C6
 Timing Models : Final
-Total logic elements : 112 / 55,856 ( < 1 % )
-    Total combinational functions : 112 / 55,856 ( < 1 % )
-    Dedicated logic registers : 3 / 55,856 ( < 1 % )
-Total registers : 3
-Total pins : 50 / 325 ( 15 % )
+Total logic elements : 0 / 6,272 ( 0 % )
+    Total combinational functions : 0 / 6,272 ( 0 % )
+    Dedicated logic registers : 0 / 6,272 ( 0 % )
+Total registers : 0
+Total pins : 34 / 92 ( 37 % )
 Total virtual pins : 0
-Total memory bits : 1,048,576 / 2,396,160 ( 44 % )
-Embedded Multiplier 9-bit elements : 0 / 308 ( 0 % )
-Total PLLs : 0 / 4 ( 0 % )
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

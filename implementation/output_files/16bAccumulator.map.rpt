@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 16bAccumulator
-Wed May 18 10:31:21 2022
+Thu May 19 10:12:40 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,27 +10,36 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Parameter Settings for User Entity Instance: AccMemory:memsub
-  6. Parameter Settings for User Entity Instance: AccMemory:memsub|control:control_inst
-  7. Parameter Settings for User Entity Instance: AccMemory:memsub|memory:memory_inst
-  8. Port Connectivity Checks: "alu_sub:alus|reg16:ALUOut"
-  9. Port Connectivity Checks: "alu_sub:alus|alu16:ALUC"
- 10. Port Connectivity Checks: "alu_sub:alus|mux3b16:ALUSrcB"
- 11. Port Connectivity Checks: "alu_sub:alus|mux2b16:ALUSrcA"
- 12. Port Connectivity Checks: "alu_sub:alus"
- 13. Port Connectivity Checks: "wires_subsystem:wiresub|mux3b16:AccSource"
- 14. Port Connectivity Checks: "wires_subsystem:wiresub"
- 15. Port Connectivity Checks: "AccMemory:memsub|reg16:MDR_inst"
- 16. Port Connectivity Checks: "AccMemory:memsub|reg16:IR_inst"
- 17. Port Connectivity Checks: "AccMemory:memsub|memory:memory_inst"
- 18. Port Connectivity Checks: "AccMemory:memsub|mux1b16:mux1b16_inst"
- 19. Port Connectivity Checks: "AccMemory:memsub|mux2b16:mux2b16_inst"
- 20. Port Connectivity Checks: "AccMemory:memsub|control:control_inst"
- 21. Port Connectivity Checks: "AccMemory:memsub"
- 22. Port Connectivity Checks: "PC:pcs|mux2b16:src_mux"
- 23. Port Connectivity Checks: "PC:pcs"
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |accumulatorFull|AccMemory:memsub|control:control_inst|current_state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: AccMemory:memsub
+ 13. Parameter Settings for User Entity Instance: AccMemory:memsub|control:control_inst
+ 14. Parameter Settings for User Entity Instance: AccMemory:memsub|memory:memory_inst
+ 15. Port Connectivity Checks: "alu_sub:alus|reg16:ALUOut"
+ 16. Port Connectivity Checks: "alu_sub:alus|alu16:ALUC"
+ 17. Port Connectivity Checks: "alu_sub:alus|mux3b16:ALUSrcB"
+ 18. Port Connectivity Checks: "alu_sub:alus|mux2b16:ALUSrcA"
+ 19. Port Connectivity Checks: "alu_sub:alus"
+ 20. Port Connectivity Checks: "wires_subsystem:wiresub|mux3b16:AccSource"
+ 21. Port Connectivity Checks: "wires_subsystem:wiresub"
+ 22. Port Connectivity Checks: "AccMemory:memsub|reg16:MDR_inst"
+ 23. Port Connectivity Checks: "AccMemory:memsub|reg16:IR_inst"
+ 24. Port Connectivity Checks: "AccMemory:memsub|memory:memory_inst"
+ 25. Port Connectivity Checks: "AccMemory:memsub|mux1b16:mux1b16_inst"
+ 26. Port Connectivity Checks: "AccMemory:memsub|mux2b16:mux2b16_inst"
+ 27. Port Connectivity Checks: "AccMemory:memsub|control:control_inst"
+ 28. Port Connectivity Checks: "AccMemory:memsub"
+ 29. Port Connectivity Checks: "PC:pcs|mux2b16:src_mux"
+ 30. Port Connectivity Checks: "PC:pcs"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
+ 34. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,20 +65,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 18 10:31:21 2022           ;
+; Analysis & Synthesis Status        ; Successful - Thu May 19 10:12:40 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; 16bAccumulator                              ;
 ; Top-level Entity Name              ; accumulatorFull                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 34                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -172,6 +181,220 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                                   ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; reg16.v                          ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v           ;         ;
+; alu16.v                          ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v           ;         ;
+; mux1b16.v                        ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v         ;         ;
+; se16.v                           ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16.v            ;         ;
+; ze16.v                           ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze16.v            ;         ;
+; memory.v                         ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v          ;         ;
+; memory.txt                       ; yes             ; User File              ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.txt        ;         ;
+; control.v                        ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v         ;         ;
+; mux2b16.v                        ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v         ;         ;
+; accumulatorFull.v                ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v ;         ;
+; alu_sub.v                        ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v         ;         ;
+; mux3b16.v                        ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v         ;         ;
+; PC.v                             ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v              ;         ;
+; shift_left.v                     ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/shift_left.v      ;         ;
+; wires_subsystem.v                ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v ;         ;
+; mux1b1.v                         ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b1.v          ;         ;
+; AccMemory.v                      ; yes             ; User Verilog HDL File  ; C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v       ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+;                                             ;          ;
+; Total combinational functions               ; 0        ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 0        ;
+;     -- <=2 input functions                  ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 0        ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+;     -- Dedicated logic registers            ; 0        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 34       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; IOIn[10] ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 34       ;
+; Average fan-out                             ; 0.50     ;
++---------------------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
+; |accumulatorFull           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |accumulatorFull    ; accumulatorFull ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |accumulatorFull|AccMemory:memsub|control:control_inst|current_state                                                                                                                                                                                                                                                                                                                                                                                                       ;
++----------------------+----------------------+--------------------+-------------------+------------------+--------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+----------------------+-------------------+-------------------+-------------------+-------------------+---------------------+--------------------+--------------------+--------------------+----------------------+---------------------+
+; Name                 ; current_state.Loadui ; current_state.Slti ; current_state.Add ; current_state.Ms ; current_state.Jump ; current_state.Bne ; current_state.Sub ; current_state.Beq ; current_state.Or ; current_state.Sw ; current_state.Lw ; current_state.SwOrLw ; current_state.Slt ; current_state.And ; current_state.Ori ; current_state.Jal ; current_state.Loadi ; current_state.Save ; current_state.Addi ; current_state.Load ; current_state.Decode ; current_state.Fetch ;
++----------------------+----------------------+--------------------+-------------------+------------------+--------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+----------------------+-------------------+-------------------+-------------------+-------------------+---------------------+--------------------+--------------------+--------------------+----------------------+---------------------+
+; current_state.Fetch  ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 0                   ;
+; current_state.Decode ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 1                    ; 1                   ;
+; current_state.Load   ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 1                  ; 0                    ; 1                   ;
+; current_state.Addi   ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 1                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Save   ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 1                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Loadi  ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 1                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Jal    ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 1                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Ori    ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 1                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.And    ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 1                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Slt    ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 1                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.SwOrLw ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 1                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Lw     ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 1                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Sw     ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 1                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Or     ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 1                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Beq    ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 1                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Sub    ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 1                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Bne    ; 0                    ; 0                  ; 0                 ; 0                ; 0                  ; 1                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Jump   ; 0                    ; 0                  ; 0                 ; 0                ; 1                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Ms     ; 0                    ; 0                  ; 0                 ; 1                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Add    ; 0                    ; 0                  ; 1                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Slti   ; 0                    ; 1                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
+; current_state.Loadui ; 1                    ; 0                  ; 0                 ; 0                ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                    ; 0                 ; 0                 ; 0                 ; 0                 ; 0                   ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
++----------------------+----------------------+--------------------+-------------------+------------------+--------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+----------------------+-------------------+-------------------+-------------------+-------------------+---------------------+--------------------+--------------------+--------------------+----------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                    ;
++------------------------------------------------------------+----------------------------------------------------------+
+; Register name                                              ; Reason for Removal                                       ;
++------------------------------------------------------------+----------------------------------------------------------+
+; alu_sub:alus|reg16:ALUOut|Out[0..15]                       ; Stuck at GND due to stuck port clock_enable              ;
+; AccMemory:memsub|reg16:MDR_inst|Out[0..15]                 ; Lost fanout                                              ;
+; AccMemory:memsub|memory:memory_inst|addr_reg[1..9]         ; Stuck at GND due to stuck port data_in                   ;
+; PC:pcs|reg16:pc_reg|Out[15]                                ; Lost fanout                                              ;
+; wires_subsystem:wiresub|reg16:Acc|Out[15]                  ; Lost fanout                                              ;
+; PC:pcs|reg16:pc_reg|Out[14]                                ; Lost fanout                                              ;
+; wires_subsystem:wiresub|reg16:Acc|Out[14]                  ; Lost fanout                                              ;
+; PC:pcs|reg16:pc_reg|Out[13]                                ; Lost fanout                                              ;
+; wires_subsystem:wiresub|reg16:Acc|Out[13]                  ; Lost fanout                                              ;
+; PC:pcs|reg16:pc_reg|Out[12]                                ; Lost fanout                                              ;
+; wires_subsystem:wiresub|reg16:Acc|Out[12]                  ; Lost fanout                                              ;
+; PC:pcs|reg16:pc_reg|Out[11]                                ; Lost fanout                                              ;
+; wires_subsystem:wiresub|reg16:Acc|Out[11]                  ; Lost fanout                                              ;
+; PC:pcs|reg16:pc_reg|Out[10]                                ; Lost fanout                                              ;
+; wires_subsystem:wiresub|reg16:Acc|Out[0,2..10]             ; Lost fanout                                              ;
+; wires_subsystem:wiresub|reg16:Sp|Out[0]                    ; Lost fanout                                              ;
+; wires_subsystem:wiresub|reg16:Acc|Out[1]                   ; Stuck at GND due to stuck port data_in                   ;
+; AccMemory:memsub|memory:memory_inst|addr_reg[0]            ; Stuck at GND due to stuck port data_in                   ;
+; PC:pcs|reg16:pc_reg|Out[0,2..9]                            ; Stuck at GND due to stuck port data_in                   ;
+; AccMemory:memsub|memory:memory_inst|IOOut[1..15]           ; Merged with AccMemory:memsub|memory:memory_inst|IOOut[0] ;
+; AccMemory:memsub|memory:memory_inst|IOOut[0]               ; Stuck at GND due to stuck port data_in                   ;
+; PC:pcs|reg16:pc_reg|Out[1]                                 ; Stuck at GND due to stuck port data_in                   ;
+; AccMemory:memsub|control:control_inst|current_state.Load   ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Addi   ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Loadi  ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Ori    ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.And    ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Slt    ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Or     ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Beq    ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Sub    ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Bne    ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Jump   ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Ms     ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Add    ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Slti   ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Loadui ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Sw     ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state~4      ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state~5      ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state~6      ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state~7      ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state~8      ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Fetch  ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Decode ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Save   ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Jal    ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.SwOrLw ; Lost fanout                                              ;
+; AccMemory:memsub|control:control_inst|current_state.Lw     ; Lost fanout                                              ;
+; Total Number of Removed Registers = 118                    ;                                                          ;
++------------------------------------------------------------+----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                     ;
++----------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
+; Register name                                            ; Reason for Removal             ; Registers Removed due to This Register                                              ;
++----------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
+; AccMemory:memsub|memory:memory_inst|addr_reg[8]          ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[1], PC:pcs|reg16:pc_reg|Out[0],               ;
+;                                                          ; due to stuck port data_in      ; PC:pcs|reg16:pc_reg|Out[9], PC:pcs|reg16:pc_reg|Out[8], PC:pcs|reg16:pc_reg|Out[7], ;
+;                                                          ;                                ; PC:pcs|reg16:pc_reg|Out[6], PC:pcs|reg16:pc_reg|Out[5], PC:pcs|reg16:pc_reg|Out[4], ;
+;                                                          ;                                ; PC:pcs|reg16:pc_reg|Out[3], PC:pcs|reg16:pc_reg|Out[2], PC:pcs|reg16:pc_reg|Out[1]  ;
+; alu_sub:alus|reg16:ALUOut|Out[0]                         ; Stuck at GND                   ; PC:pcs|reg16:pc_reg|Out[15], wires_subsystem:wiresub|reg16:Acc|Out[0],              ;
+;                                                          ; due to stuck port clock_enable ; wires_subsystem:wiresub|reg16:Sp|Out[0],                                            ;
+;                                                          ;                                ; AccMemory:memsub|memory:memory_inst|IOOut[0]                                        ;
+; alu_sub:alus|reg16:ALUOut|Out[14]                        ; Stuck at GND                   ; PC:pcs|reg16:pc_reg|Out[14], wires_subsystem:wiresub|reg16:Acc|Out[14]              ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[13]                        ; Stuck at GND                   ; PC:pcs|reg16:pc_reg|Out[13], wires_subsystem:wiresub|reg16:Acc|Out[13]              ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[12]                        ; Stuck at GND                   ; PC:pcs|reg16:pc_reg|Out[12], wires_subsystem:wiresub|reg16:Acc|Out[12]              ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[11]                        ; Stuck at GND                   ; PC:pcs|reg16:pc_reg|Out[11], wires_subsystem:wiresub|reg16:Acc|Out[11]              ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[10]                        ; Stuck at GND                   ; PC:pcs|reg16:pc_reg|Out[10], wires_subsystem:wiresub|reg16:Acc|Out[10]              ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[15]                        ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[15]                                           ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[9]                         ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[9]                                            ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[8]                         ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[8]                                            ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[7]                         ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[7]                                            ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[6]                         ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[6]                                            ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[5]                         ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[5]                                            ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[4]                         ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[4]                                            ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[3]                         ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[3]                                            ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; alu_sub:alus|reg16:ALUOut|Out[2]                         ; Stuck at GND                   ; wires_subsystem:wiresub|reg16:Acc|Out[2]                                            ;
+;                                                          ; due to stuck port clock_enable ;                                                                                     ;
+; AccMemory:memsub|control:control_inst|current_state.Load ; Lost Fanouts                   ; AccMemory:memsub|control:control_inst|current_state.Decode                          ;
++----------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +---------------------------------------------------------------+
@@ -289,15 +512,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wires_subsystem:wiresub"                                                                                                                                                                       ;
-+----------+---------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type    ; Severity         ; Details                                                                                                                                                                           ;
-+----------+---------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; IR       ; Input   ; Warning          ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; SpOutPut ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                                                            ;
-; SpOutput ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                          ;
-+----------+---------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wires_subsystem:wiresub"                                                                                                                                                              ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                           ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; IR       ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; SpOutput ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "SpOutput[15..1]" have no fanouts                                                     ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -359,20 +581,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "AccMemory:memsub"                                                                                                                                              ;
-+---------------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type    ; Severity         ; Details                                                                                                                                      ;
-+---------------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset         ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                       ;
-; ACCSrc        ; Output  ; Warning          ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "ACCSrc[2..1]" have no fanouts                    ;
-; ACCSrc        ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; ALUSrcB       ; Output  ; Warning          ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "ALUSrcB[2..1]" have no fanouts                   ;
-; ALUSrcB       ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; IRROut[15..8] ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; Data          ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                       ;
-; Reset         ; Input   ; Warning          ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+---------------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AccMemory:memsub"                                                                                                                   ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                                    ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; ACCSrc        ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "ACCSrc[2..1]" have no fanouts  ;
+; ACCSrc        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
+; ALUSrcB       ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "ALUSrcB[2..1]" have no fanouts ;
+; ALUSrcB       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
+; IRROut[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------+
@@ -396,147 +615,249 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 34                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 18 10:31:12 2022
+    Info: Processing started: Thu May 19 10:12:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 16bAccumulator -c 16bAccumulator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file reg16.v
-    Info (12023): Found entity 1: reg16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v Line: 1
+    Info (12023): Found entity 1: reg16 File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mem16.v
-    Info (12023): Found entity 1: mem16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v Line: 1
+    Info (12023): Found entity 1: mem16 File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mem16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu16.v
-    Info (12023): Found entity 1: alu16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 1
+    Info (12023): Found entity 1: alu16 File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux1b16.v
-    Info (12023): Found entity 1: mux1b16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v Line: 1
+    Info (12023): Found entity 1: mux1b16 File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file se16.v
-    Info (12023): Found entity 1: se16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16.v Line: 1
+    Info (12023): Found entity 1: se16 File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ze16.v
-    Info (12023): Found entity 1: ze16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze16.v Line: 1
-Warning (10229): Verilog HDL Expression warning at memory.v(28): truncated literal to match 10 bits File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 28
+    Info (12023): Found entity 1: ze16 File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze16.v Line: 1
+Warning (10229): Verilog HDL Expression warning at memory.v(28): truncated literal to match 10 bits File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file memory.v
-    Info (12023): Found entity 1: memory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 4
+    Info (12023): Found entity 1: memory File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file tb_memory.v
-    Info (12023): Found entity 1: tb_memory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_memory.v Line: 1
+    Info (12023): Found entity 1: tb_memory File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_memory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file blockmemorycontrol.v
-    Info (12023): Found entity 1: MIPS_control_unit File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/BlockMemoryControl.v Line: 1
+    Info (12023): Found entity 1: MIPS_control_unit File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/BlockMemoryControl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file connected_control_memory.v
-    Info (12023): Found entity 1: connected_control_memory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/connected_control_memory.v Line: 1
+    Info (12023): Found entity 1: connected_control_memory File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/connected_control_memory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_connected_control_memory.v
-    Info (12023): Found entity 1: tb_connected_control_memory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_connected_control_memory.v Line: 1
+    Info (12023): Found entity 1: tb_connected_control_memory File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_connected_control_memory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control.v
-    Info (12023): Found entity 1: control File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 1
+    Info (12023): Found entity 1: control File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2b16.v
-    Info (12023): Found entity 1: mux2b16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v Line: 1
+    Info (12023): Found entity 1: mux2b16 File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file accumulatorfull.v
-    Info (12023): Found entity 1: accumulatorFull File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 1
+    Info (12023): Found entity 1: accumulatorFull File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_sub.v
-    Info (12023): Found entity 1: alu_sub File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 1
+    Info (12023): Found entity 1: alu_sub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux3b16.v
-    Info (12023): Found entity 1: mux3b16 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v Line: 1
+    Info (12023): Found entity 1: mux3b16 File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc.v
-    Info (12023): Found entity 1: PC File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 1
+    Info (12023): Found entity 1: PC File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shift_left.v
-    Info (12023): Found entity 1: shift_left File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/shift_left.v Line: 1
+    Info (12023): Found entity 1: shift_left File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/shift_left.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file wires_subsystem.v
-    Info (12023): Found entity 1: wires_subsystem File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 1
+    Info (12023): Found entity 1: wires_subsystem File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux1b1.v
-    Info (12023): Found entity 1: mux1b1 File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b1.v Line: 1
+    Info (12023): Found entity 1: mux1b1 File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file accmemory.v
-    Info (12023): Found entity 1: AccMemory File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at accumulatorFull.v(85): created implicit net for "AccSrc" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 85
-Warning (10236): Verilog HDL Implicit Net warning at accumulatorFull.v(90): created implicit net for "ALUArcB" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 90
-Warning (10236): Verilog HDL Implicit Net warning at accumulatorFull.v(118): created implicit net for "spo" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 118
-Warning (10236): Verilog HDL Implicit Net warning at alu_sub.v(43): created implicit net for "ALUOp" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 43
-Warning (10236): Verilog HDL Implicit Net warning at AccMemory.v(96): created implicit net for "A_sig" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 96
-Warning (10236): Verilog HDL Implicit Net warning at AccMemory.v(97): created implicit net for "B_sig" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 97
-Warning (10236): Verilog HDL Implicit Net warning at AccMemory.v(119): created implicit net for "IROut" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 119
+    Info (12023): Found entity 1: AccMemory File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_16baccumulator.v
+    Info (12023): Found entity 1: tb_16bAccumulator File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_16bAccumulator.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at accumulatorFull.v(85): created implicit net for "AccSrc" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 85
+Warning (10236): Verilog HDL Implicit Net warning at accumulatorFull.v(90): created implicit net for "ALUArcB" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 90
+Warning (10236): Verilog HDL Implicit Net warning at accumulatorFull.v(118): created implicit net for "spo" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 118
+Warning (10236): Verilog HDL Implicit Net warning at alu_sub.v(43): created implicit net for "ALUOp" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at AccMemory.v(96): created implicit net for "A_sig" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 96
+Warning (10236): Verilog HDL Implicit Net warning at AccMemory.v(97): created implicit net for "B_sig" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 97
+Warning (10236): Verilog HDL Implicit Net warning at AccMemory.v(119): created implicit net for "IROut" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 119
 Info (12127): Elaborating entity "accumulatorFull" for the top level hierarchy
-Info (12128): Elaborating entity "PC" for hierarchy "PC:pcs" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 64
-Info (12128): Elaborating entity "shift_left" for hierarchy "PC:pcs|shift_left:zel" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 22
-Info (12128): Elaborating entity "mux2b16" for hierarchy "PC:pcs|mux2b16:src_mux" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 31
-Info (12128): Elaborating entity "mux1b1" for hierarchy "PC:pcs|mux1b1:bnebeq_mux" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 38
-Info (12128): Elaborating entity "reg16" for hierarchy "PC:pcs|reg16:pc_reg" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 46
-Info (12128): Elaborating entity "AccMemory" for hierarchy "AccMemory:memsub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 100
-Warning (10034): Output port "IRROut" at AccMemory.v(23) has no driver File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 23
-Info (12128): Elaborating entity "control" for hierarchy "AccMemory:memsub|control:control_inst" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 59
-Warning (10230): Verilog HDL assignment warning at control.v(149): truncated value with size 32 to match size of target (2) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 149
-Warning (10230): Verilog HDL assignment warning at control.v(238): truncated value with size 32 to match size of target (2) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 238
-Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "PCSrc", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ALUSrcA", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ALUSrcB", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "MemAddr", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ALUOp", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ACCSrc", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "MemData", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "BneOrBeq", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "BneOrBeq[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "BneOrBeq[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "MemData[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ACCSrc[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ACCSrc[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ACCSrc[2]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ALUOp[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ALUOp[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "MemAddr[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "MemAddr[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ALUSrcB[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ALUSrcB[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ALUSrcB[2]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ALUSrcA[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "ALUSrcA[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "PCSrc[0]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (10041): Inferred latch for "PCSrc[1]" at control.v(61) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
-Info (12128): Elaborating entity "mux1b16" for hierarchy "AccMemory:memsub|mux1b16:mux1b16_inst" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 100
-Info (12128): Elaborating entity "memory" for hierarchy "AccMemory:memsub|memory:memory_inst" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 111
-Warning (10850): Verilog HDL warning at memory.v(22): number of words (8) in memory file does not match the number of elements in the address range [0:1023] File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 22
-Info (12128): Elaborating entity "wires_subsystem" for hierarchy "wires_subsystem:wiresub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 123
-Warning (10034): Output port "MDROutPut" at wires_subsystem.v(13) has no driver File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 13
-Info (12128): Elaborating entity "se16" for hierarchy "wires_subsystem:wiresub|se16:SignExtend" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 21
-Info (12128): Elaborating entity "ze16" for hierarchy "wires_subsystem:wiresub|ze16:ZeroExtend" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 25
-Info (12128): Elaborating entity "mux3b16" for hierarchy "wires_subsystem:wiresub|mux3b16:AccSource" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 27
-Info (12128): Elaborating entity "alu_sub" for hierarchy "alu_sub:alus" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 145
-Info (12128): Elaborating entity "alu16" for hierarchy "alu_sub:alus|alu16:ALUC" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 46
-Warning (10270): Verilog HDL Case Statement warning at alu16.v(14): incomplete case statement has no default case item File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 14
-Warning (10240): Verilog HDL Always Construct warning at alu16.v(10): inferring latch(es) for variable "Zero", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Warning (10240): Verilog HDL Always Construct warning at alu16.v(10): inferring latch(es) for variable "Out", which holds its previous value in one or more paths through the always construct File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[0]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[1]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[2]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[3]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[4]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[5]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[6]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[7]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[8]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[9]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[10]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[11]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[12]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[13]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[14]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Out[15]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Info (10041): Inferred latch for "Zero[0]" at alu16.v(10) File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
-Error (12002): Port "SpOutPut" does not exist in macrofunction "wiresub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 123
-Error (12002): Port "Data" does not exist in macrofunction "memsub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 100
-Error (12002): Port "reset" does not exist in macrofunction "memsub" File: C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 100
+Info (12128): Elaborating entity "PC" for hierarchy "PC:pcs" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 64
+Info (12128): Elaborating entity "shift_left" for hierarchy "PC:pcs|shift_left:zel" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 22
+Info (12128): Elaborating entity "mux2b16" for hierarchy "PC:pcs|mux2b16:src_mux" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 31
+Info (12128): Elaborating entity "mux1b1" for hierarchy "PC:pcs|mux1b1:bnebeq_mux" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 38
+Info (12128): Elaborating entity "reg16" for hierarchy "PC:pcs|reg16:pc_reg" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v Line: 46
+Info (12128): Elaborating entity "AccMemory" for hierarchy "AccMemory:memsub" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 100
+Warning (10034): Output port "IRROut" at AccMemory.v(23) has no driver File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 23
+Info (12128): Elaborating entity "control" for hierarchy "AccMemory:memsub|control:control_inst" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 59
+Warning (10230): Verilog HDL assignment warning at control.v(149): truncated value with size 32 to match size of target (2) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 149
+Warning (10230): Verilog HDL assignment warning at control.v(238): truncated value with size 32 to match size of target (2) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 238
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "PCSrc", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ALUSrcA", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ALUSrcB", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "MemAddr", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ALUOp", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "ACCSrc", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "MemData", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Warning (10240): Verilog HDL Always Construct warning at control.v(61): inferring latch(es) for variable "BneOrBeq", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "BneOrBeq[0]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "BneOrBeq[1]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "MemData[0]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ACCSrc[0]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ACCSrc[1]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ACCSrc[2]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUOp[0]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUOp[1]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "MemAddr[0]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "MemAddr[1]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcB[0]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcB[1]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcB[2]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcA[0]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "ALUSrcA[1]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "PCSrc[0]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (10041): Inferred latch for "PCSrc[1]" at control.v(61) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v Line: 61
+Info (12128): Elaborating entity "mux1b16" for hierarchy "AccMemory:memsub|mux1b16:mux1b16_inst" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 100
+Info (12128): Elaborating entity "memory" for hierarchy "AccMemory:memsub|memory:memory_inst" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 111
+Warning (10850): Verilog HDL warning at memory.v(22): number of words (75) in memory file does not match the number of elements in the address range [0:1023] File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 22
+Info (12128): Elaborating entity "wires_subsystem" for hierarchy "wires_subsystem:wiresub" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 123
+Warning (10034): Output port "MDROutPut" at wires_subsystem.v(13) has no driver File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 13
+Info (12128): Elaborating entity "se16" for hierarchy "wires_subsystem:wiresub|se16:SignExtend" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 21
+Info (12128): Elaborating entity "ze16" for hierarchy "wires_subsystem:wiresub|ze16:ZeroExtend" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 25
+Info (12128): Elaborating entity "mux3b16" for hierarchy "wires_subsystem:wiresub|mux3b16:AccSource" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v Line: 27
+Info (12128): Elaborating entity "alu_sub" for hierarchy "alu_sub:alus" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 145
+Info (12128): Elaborating entity "alu16" for hierarchy "alu_sub:alus|alu16:ALUC" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v Line: 46
+Warning (10270): Verilog HDL Case Statement warning at alu16.v(14): incomplete case statement has no default case item File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 14
+Warning (10240): Verilog HDL Always Construct warning at alu16.v(10): inferring latch(es) for variable "Zero", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Warning (10240): Verilog HDL Always Construct warning at alu16.v(10): inferring latch(es) for variable "Out", which holds its previous value in one or more paths through the always construct File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[0]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[1]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[2]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[3]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[4]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[5]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[6]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[7]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[8]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[9]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[10]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[11]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[12]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[13]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[14]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Out[15]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (10041): Inferred latch for "Zero[0]" at alu16.v(10) File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "AccMemory:memsub|addr[15]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[14]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[13]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[12]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[11]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[10]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[9]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[8]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[7]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[6]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[5]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[4]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[3]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[2]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+    Warning (12110): Net "AccMemory:memsub|addr[1]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "zero[15]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[14]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[13]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[12]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[11]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[10]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[9]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[8]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[7]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[6]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[5]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[4]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[3]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[2]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+    Warning (12110): Net "zero[1]" is missing source, defaulting to GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 44
+Warning (14026): LATCH primitive "alu_sub:alus|alu16:ALUC|Out[0]" is permanently enabled File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Warning (14026): LATCH primitive "alu_sub:alus|alu16:ALUC|Out[2]" is permanently enabled File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Warning (14026): LATCH primitive "alu_sub:alus|alu16:ALUC|Out[1]" is permanently enabled File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v Line: 10
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "AccMemory:memsub|memory:memory_inst|ram" is uninferred due to asynchronous read logic File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v Line: 16
 Warning (12241): 12 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (144001): Generated suppressed messages file C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/output_files/16bAccumulator.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 26 warnings
-    Error: Peak virtual memory: 4711 megabytes
-    Error: Processing ended: Wed May 18 10:31:21 2022
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:22
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Output[0]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[1]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[2]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[3]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[4]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[5]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[6]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[7]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[8]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[9]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[10]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[11]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[12]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[13]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[14]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+    Warning (13410): Pin "Output[15]" is stuck at GND File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 10
+Info (17049): 65 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/output_files/16bAccumulator.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 18 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "IOIn[10]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[11]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[12]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[13]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[14]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[15]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "CLK" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 6
+    Warning (15610): No output dependent on input pin "reset[0]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 5
+    Warning (15610): No output dependent on input pin "IOIn[0]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[1]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[2]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[3]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[4]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[5]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[6]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[7]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[8]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+    Warning (15610): No output dependent on input pin "IOIn[9]" File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v Line: 2
+Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 16 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 97 warnings
+    Info: Peak virtual memory: 4734 megabytes
+    Info: Processing ended: Thu May 19 10:12:40 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/brownjl5/Documents/rhit-csse232-2122c-project-yellow-2122c-03/implementation/output_files/16bAccumulator.map.smsg.
+The suppressed messages can be found in C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/output_files/16bAccumulator.map.smsg.
 
 
