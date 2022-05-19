@@ -94,4 +94,7 @@ _xmsgs/
 work/
 
 *implementation/db/
+*implementation/incremental_db/
+*implementation/output_files/
+
 
