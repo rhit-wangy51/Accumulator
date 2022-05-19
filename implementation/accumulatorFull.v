@@ -22,7 +22,7 @@ wire [0:0] SpWrite;
 	//ALU
 wire [1:0] ALUSrcA;
 wire [2:0] ALUSrcB;
-wire [1:0] ALUOp;
+wire [2:0] ALUOp;
 
 
 //PC output

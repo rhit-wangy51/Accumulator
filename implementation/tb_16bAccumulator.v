@@ -30,7 +30,7 @@ initial begin
 	IOIn = 16'hFF00;
 	#(HALF_PERIOD);
 	reset = 1;
-	#(HALF_PERIOD*2)
+	#(HALF_PERIOD*6)
 	reset = 0;
 end
 
