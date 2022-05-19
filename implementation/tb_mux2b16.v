@@ -30,30 +30,30 @@ initial begin
 	#100;
 	
 // Select A
-	$display("Testing A.");
+	$display("Testing D.");
 	
 	OP = 2'b11;
 	#100;
 	
-	if(Out != 16'b1000) begin
-		 $display("(A SELECT) Error at output = %d, expecting = 1000", Out);
+	if(Out != 16'b0001) begin
+		 $display("(D SELECT) Error at output = %d, expecting = 1000", Out);
 	 end
 	 else begin
-		$display("Testing A select PASS.");
+		$display("Testing D select PASS.");
 	 end
 	 
 // Select B
-	$display("Testing B.");
+	$display("Testing C.");
 	
 	OP = 2'b10;
 	#100;
 	
 	
-	if(Out != 16'b0100) begin
-		 $display("(B SELECT) Error at output = %d, expecting = 0100", Out);
+	if(Out != 16'b0010) begin
+		 $display("(C SELECT) Error at output = %d, expecting = 0100", Out);
 	 end
 	 else begin
-		$display("Testing B select PASS.");
+		$display("Testing C select PASS.");
 	 end
 	 
 // Select C
@@ -63,25 +63,25 @@ initial begin
 	#100;
 	
 	
-	if(Out != 16'b0010) begin
-		 $display("(C SELECT) Error at output = %d, expecting = 0010", Out);
+	if(Out != 16'b0100) begin
+		 $display("(B SELECT) Error at output = %d, expecting = 0010", Out);
 	 end
 	 else begin
-		$display("Testing C select PASS.");
+		$display("Testing B select PASS.");
 	 end
 	 
 // Select D
-	$display("Testing D.");
+	$display("Testing B.");
 	
 	OP = 2'b00;
 	#100;
 	
 	
-	if(Out != 16'b0001) begin
-		 $display("(D SELECT) Error at output = %d, expecting = 0001", Out);
+	if(Out != 16'b1000) begin
+		 $display("(A SELECT) Error at output = %d, expecting = 0001", Out);
 	 end
 	 else begin
-		$display("Testing D select PASS.");
+		$display("Testing A select PASS.");
 	 end
 	 	
 end

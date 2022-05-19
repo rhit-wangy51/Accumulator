@@ -16,8 +16,8 @@ mux1b1 test_mux1b16(
 );
 
 initial begin
-	InA = 16'b1000;;
-	InB = 16'b0100;;
+	InA = 16'b1000;
+	InB = 16'b0100;
 	OP = 0;
 	#10
 	

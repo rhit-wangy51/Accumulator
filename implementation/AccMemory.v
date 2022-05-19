@@ -22,11 +22,11 @@ module AccMemory(
 	
 	output [15:0] IRROut,
 	output [15:0] MDROut,
-	output [15:0] IOOut
+	output [15:0] IOOut,
+	output [15:0] MemOut
 );
 
 
-wire [15:0] memout;
 wire [15:0] memin;
 wire [15:0] addr;
 wire [1:0] MemAddr;
@@ -40,7 +40,7 @@ parameter RA = 16'h07fe;
 
 control control_inst
 (
-	.Opcode(memout[15:10]) ,	// input [5:0] Opcode_sig
+	.Opcode(MemOut[15:10]) ,	// input [5:0] Opcode_sig
 	.CLK(CLK) ,	// input  CLK_sig
 	.Reset(Reset) ,	// input  Reset_sig
 	.PCSrc(PCSrc) ,	// output [1:0] PCSrc_sig
@@ -106,13 +106,13 @@ memory memory_inst
 	.addr(addr) ,	// input [ADDR_WIDTH-1:0] addr_sig
 	.we(MemWrite) ,	// input  we_sig
 	.CLK(CLK) ,	// input  clk_sig
-	.q(memout) ,	// output [DATA_WIDTH-1:0] q_sig
+	.q(MemOut) ,	// output [DATA_WIDTH-1:0] q_sig
 	.IOOut(IOOut) 	// output [DATA_WIDTH-1:0] IOOut_sig
 );
 
 reg16 IR_inst
 (
-	.In(memout) ,	// input [15:0] In_sig
+	.In(MemOut) ,	// input [15:0] In_sig
 	.E(IRWrite) ,	// input [0:0] E_sig
 	.reset(Reset) ,	// input [0:0] reset_sig
 	.CLK(CLK) ,	// input [0:0] CLK_sig
@@ -121,7 +121,7 @@ reg16 IR_inst
 
 reg16 MDR_inst
 (
-	.In(memout) ,	// input [15:0] In_sig
+	.In(MemOut) ,	// input [15:0] In_sig
 	.E(1) ,	// input [0:0] E_sig
 	.reset(Reset) ,	// input [0:0] reset_sig
 	.CLK(CLK) ,	// input [0:0] CLK_sig

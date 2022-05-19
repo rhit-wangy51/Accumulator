@@ -10,13 +10,14 @@ module alu_sub(
 	input [3:0] SrcB,
 	input [2:0] ALUOP,
 	input [0:0] CLK,
-	output reg [15:0] Out,
-	output reg [15:0] aluOut,
-	output reg [0:0] Zero,
+	output [15:0] Out,
+	output [15:0] aluOut,
+	output [0:0] Zero
 	
-	wire [15:0] AOut,
-	wire [15:0] BOut
 );
+
+	wire [15:0] AOut;
+	wire [15:0] BOut;
 
 mux2b16 ALUSrcA(
 	.A(PC),

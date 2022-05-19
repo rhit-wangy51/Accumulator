@@ -1,5 +1,4 @@
 Info: Start Nativelink Simulation process
-<<<<<<< HEAD
 Info: NativeLink has detected Verilog design -- Verilog simulation models will be used
 
 ========= EDA Simulation Settings =====================
@@ -19,23 +18,6 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script c:/intelfpga_lite/18.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File 16bAccumulator_run_msim_rtl_verilog.do already exists - backing up current file as 16bAccumulator_run_msim_rtl_verilog.do.bak
+Warning: File 16bAccumulator_run_msim_rtl_verilog.do already exists - backing up current file as 16bAccumulator_run_msim_rtl_verilog.do.bak4
 Info: Spawning ModelSim-Altera Simulation software 
 Info: NativeLink simulation flow was successful
-=======
-Error: Run Analysis and Elaboration successfully before starting RTL NativeLink Simulation
-Analysis and Synthesis should be completed successfully before starting RTL NativeLink Simulation
-Error: NativeLink simulation flow was NOT successful
-
-
-
-================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
-Nativelink TCL script failed with errorCode:  1
-Nativelink TCL script failed with errorInfo:  1
-    invoked from within
-"if ![qmap_successfully_completed] {
-            nl_postmsg error "Error: Run Analysis and Elaboration successfully before starting RTL NativeLink Simu..."
-    (procedure "run_eda_simulation_tool" line 232)
-    invoked from within
-"run_eda_simulation_tool eda_opts_hash"
->>>>>>> c7baced197ada4f67e3726873bd28c2ae173bb3d

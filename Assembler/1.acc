@@ -1,0 +1,9 @@
+loadi	0
+save	count
+save	i
+loop:   beq	n, done
+add	1
+save	count
+save	i
+j	loop
+done:
