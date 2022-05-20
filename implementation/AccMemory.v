@@ -88,7 +88,7 @@ mux2b16 mux2b16_inst
 	.C(16'hfffe) ,	// input [15:0] C_sig
 	.D(ALUOut) ,	// input [15:0] D_sig
 	.OP(MemAddr) ,	// input [1:0] OP_sig
-	.Out(memin) 	// output [15:0] Out_sig
+	.Out(addr) 	// output [15:0] Out_sig
 );
 
 mux1b16 mux1b16_inst
@@ -96,7 +96,7 @@ mux1b16 mux1b16_inst
 	.A(A_sig) ,	// input [0:0] A_sig
 	.B(B_sig) ,	// input [0:0] B_sig
 	.OP(MemData) ,	// input [0:0] OP_sig
-	.Out(addr) 	// output [0:0] Out_sig
+	.Out(memin) 	// output [0:0] Out_sig
 );
 
 memory memory_inst
