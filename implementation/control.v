@@ -12,7 +12,7 @@ module control (
 	output reg [0:0] ACCWrite,
 	output reg [1:0] ALUSrcA,
 	output reg [2:0] ALUSrcB,
-	output reg [1:0] ALUOp,
+	output reg [2:0] ALUOp,
 	output reg [1:0] BneOrBeq,
 	output reg [1:0] PCWrite,
 	output reg [1:0] Branch,

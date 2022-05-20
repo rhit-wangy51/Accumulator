@@ -1,297 +1,176 @@
-# vsim -gui -l msim_transcript work.tb_16bAccumulator 
-# Start time: 10:28:02 on May 19,2022
-# Loading work.tb_16bAccumulator
-# Loading work.accumulatorFull
-# Loading work.PC
-# Loading work.shift_left
-# Loading work.mux2b16
-# Loading work.mux1b1
-# Loading work.reg16
-# Loading work.AccMemory
-# Loading work.control
-# Loading work.mux1b16
-# Loading work.memory
-# Loading work.wires_subsystem
-# Loading work.se16
-# Loading work.ze16
-# Loading work.mux3b16
-# Loading work.alu_sub
-# Loading work.alu16
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'PCWrite'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'Branch'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'bneOrbeq'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ACCSrc'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ALUSrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(17).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Too few port connections. Expected 17, found 16.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/control_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Missing connection for port 'IRWrite'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(94): [PCDPC] - Port size (1) does not match connection size (16) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/mux1b16_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (16) does not match connection size (10) for port 'data'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (10) does not match connection size (16) for port 'addr'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(113): [PCDPC] - Port size (16) does not match connection size (1) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/IR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(122): [PCDPC] - Port size (1) does not match connection size (32) for port 'E'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/MDR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (8) does not match connection size (16) for port 'IR'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (16) does not match connection size (1) for port 'SpOutput'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(12).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (16) does not match connection size (1) for port 'SP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'SrcA'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (4) does not match connection size (3) for port 'SrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'ALUOP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(11).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [PCDPC] - Port size (2) does not match connection size (3) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (16) does not match connection size (2) for port 'a'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (3) does not match connection size (4) for port 'sel'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(40): [PCDPC] - Port size (3) does not match connection size (1) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUC File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v
-add wave -position insertpoint  \
-sim:/tb_16bAccumulator/CLK \
-sim:/tb_16bAccumulator/HALF_PERIOD \
-sim:/tb_16bAccumulator/IOIn \
-sim:/tb_16bAccumulator/Output \
-sim:/tb_16bAccumulator/reset
-run -all
-# ** Warning: (vsim-7) Failed to open readmem file "memory.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(22)
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst
-restart -f
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'PCWrite'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'Branch'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'bneOrbeq'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ACCSrc'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ALUSrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(17).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Too few port connections. Expected 17, found 16.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/control_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Missing connection for port 'IRWrite'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(94): [PCDPC] - Port size (1) does not match connection size (16) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/mux1b16_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (16) does not match connection size (10) for port 'data'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (10) does not match connection size (16) for port 'addr'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(113): [PCDPC] - Port size (16) does not match connection size (1) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/IR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(122): [PCDPC] - Port size (1) does not match connection size (32) for port 'E'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/MDR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (8) does not match connection size (16) for port 'IR'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (16) does not match connection size (1) for port 'SpOutput'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(12).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (16) does not match connection size (1) for port 'SP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'SrcA'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (4) does not match connection size (3) for port 'SrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'ALUOP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(11).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [PCDPC] - Port size (2) does not match connection size (3) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (16) does not match connection size (2) for port 'a'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (3) does not match connection size (4) for port 'sel'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(40): [PCDPC] - Port size (3) does not match connection size (1) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUC File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v
-# Break key hit
-restart -f
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'PCWrite'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'Branch'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'bneOrbeq'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ACCSrc'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ALUSrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(17).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Too few port connections. Expected 17, found 16.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/control_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Missing connection for port 'IRWrite'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(94): [PCDPC] - Port size (1) does not match connection size (16) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/mux1b16_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (16) does not match connection size (10) for port 'data'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (10) does not match connection size (16) for port 'addr'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(113): [PCDPC] - Port size (16) does not match connection size (1) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/IR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(122): [PCDPC] - Port size (1) does not match connection size (32) for port 'E'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/MDR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (8) does not match connection size (16) for port 'IR'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (16) does not match connection size (1) for port 'SpOutput'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(12).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (16) does not match connection size (1) for port 'SP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'SrcA'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (4) does not match connection size (3) for port 'SrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'ALUOP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(11).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [PCDPC] - Port size (2) does not match connection size (3) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (16) does not match connection size (2) for port 'a'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (3) does not match connection size (4) for port 'sel'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(40): [PCDPC] - Port size (3) does not match connection size (1) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUC File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v
-# Load canceled
-run -all
-# ** Warning: (vsim-7) Failed to open readmem file "memory.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(22)
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst
-restart -f
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'PCWrite'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'Branch'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'bneOrbeq'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ACCSrc'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ALUSrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(17).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Too few port connections. Expected 17, found 16.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/control_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Missing connection for port 'IRWrite'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(94): [PCDPC] - Port size (1) does not match connection size (16) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/mux1b16_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (16) does not match connection size (10) for port 'data'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (10) does not match connection size (16) for port 'addr'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(113): [PCDPC] - Port size (16) does not match connection size (1) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/IR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(122): [PCDPC] - Port size (1) does not match connection size (32) for port 'E'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/MDR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (8) does not match connection size (16) for port 'IR'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (16) does not match connection size (1) for port 'SpOutput'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(12).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (16) does not match connection size (1) for port 'SP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'SrcA'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (4) does not match connection size (3) for port 'SrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'ALUOP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(11).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [PCDPC] - Port size (2) does not match connection size (3) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (16) does not match connection size (2) for port 'a'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (3) does not match connection size (4) for port 'sel'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(40): [PCDPC] - Port size (3) does not match connection size (1) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUC File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v
-run
-run
-run
-add wave -position end  sim:/tb_16bAccumulator/testAccumulator/pcs/pc_reg/Out
-add wave -position end  sim:/tb_16bAccumulator/testAccumulator/memsub/IR_inst/In
-add wave -position end  sim:/tb_16bAccumulator/testAccumulator/memsub/IR_inst/Out
-restart -f
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'PCWrite'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'Branch'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(48): [PCDPC] - Port size (1) does not match connection size (2) for port 'bneOrbeq'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/pcs File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ACCSrc'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(14).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(66): [PCDPC] - Port size (3) does not match connection size (1) for port 'ALUSrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(17).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Too few port connections. Expected 17, found 16.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/control_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(41): [TFMPC] - Missing connection for port 'IRWrite'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(94): [PCDPC] - Port size (1) does not match connection size (16) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/mux1b16_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (16) does not match connection size (10) for port 'data'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(102): [PCDPC] - Port size (10) does not match connection size (16) for port 'addr'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/memory_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(113): [PCDPC] - Port size (16) does not match connection size (1) for port 'Out'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/IR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v(122): [PCDPC] - Port size (1) does not match connection size (32) for port 'E'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/memsub/MDR_inst File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (8) does not match connection size (16) for port 'IR'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(103): [PCDPC] - Port size (16) does not match connection size (1) for port 'SpOutput'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v(12).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/wiresub File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (16) does not match connection size (1) for port 'SP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'SrcA'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (4) does not match connection size (3) for port 'SrcB'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (3) does not match connection size (2) for port 'ALUOP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(11).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v(126): [PCDPC] - Port size (1) does not match connection size (16) for port 'Zero'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v
-# ** Warning: (vsim-3017) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [PCDPC] - Port size (2) does not match connection size (3) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcA File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v
-# ** Warning: (vsim-3722) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(22): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (16) does not match connection size (2) for port 'a'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(30): [PCDPC] - Port size (3) does not match connection size (4) for port 'sel'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUSrcB File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v
-# ** Warning: (vsim-3015) C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v(40): [PCDPC] - Port size (3) does not match connection size (1) for port 'OP'. The port definition is at: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_16bAccumulator/testAccumulator/alus/ALUC File: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v
-run
-run
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do 16bAccumulator_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/reg16.v 
+# -- Compiling module reg16
+# 
+# Top level modules:
+# 	reg16
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu16.v 
+# -- Compiling module alu16
+# 
+# Top level modules:
+# 	alu16
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v 
+# -- Compiling module mux1b16
+# 
+# Top level modules:
+# 	mux1b16
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16.v 
+# -- Compiling module se16
+# 
+# Top level modules:
+# 	se16
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze16.v 
+# -- Compiling module ze16
+# 
+# Top level modules:
+# 	ze16
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux2b16.v 
+# -- Compiling module mux2b16
+# 
+# Top level modules:
+# 	mux2b16
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/accumulatorFull.v 
+# -- Compiling module accumulatorFull
+# 
+# Top level modules:
+# 	accumulatorFull
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/alu_sub.v 
+# -- Compiling module alu_sub
+# 
+# Top level modules:
+# 	alu_sub
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v 
+# -- Compiling module mux3b16
+# 
+# Top level modules:
+# 	mux3b16
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v 
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/shift_left.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/shift_left.v 
+# -- Compiling module shift_left
+# 
+# Top level modules:
+# 	shift_left
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/wires_subsystem.v 
+# -- Compiling module wires_subsystem
+# 
+# Top level modules:
+# 	wires_subsystem
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b1.v 
+# -- Compiling module mux1b1
+# 
+# Top level modules:
+# 	mux1b1
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v 
+# -- Compiling module AccMemory
+# 
+# Top level modules:
+# 	AccMemory
+# End time: 10:45:53 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation {D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:45:53 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation" D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v 
+# -- Compiling module memory
+# ** Warning: D:/CSSE232/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(28): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	memory
+# End time: 10:45:54 on May 19,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# 
+# reading C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project 16Accu

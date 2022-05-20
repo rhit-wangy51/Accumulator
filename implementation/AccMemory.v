@@ -15,7 +15,7 @@ module AccMemory(
 	output [0:0] ACCWrite,
 	output [1:0] ALUSrcA,
 	output [2:0] ALUSrcB,
-	output [1:0] ALUOp,
+	output [2:0] ALUOp,
 	output [1:0] BneOrBeq,
 	output [1:0] PCWrite,
 	output [1:0] Branch,
