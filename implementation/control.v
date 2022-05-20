@@ -1,5 +1,5 @@
 module control (
-	input [5:0] Opcode,
+	input [4:0] Opcode,
 	input CLK,
 	input Reset,
 
@@ -271,13 +271,13 @@ always @ (current_state, next_state, Opcode) begin
 				case (Opcode)
 					'b00001:
 						begin
-							next_state = Save;
-							$display("The next state is Save");
+							next_state = Load;
+							$display("The next state is Load");
 						end
 					'b00010:
 						begin
-							next_state = Load;
-							$display("The next state is Load");
+							next_state = Save;
+							$display("The next state is Save");
 						end
 					'b00011:
 						begin

@@ -12,30 +12,30 @@ module memory
 	output reg [(DATA_WIDTH-1):0] IOOut
 );
 
-	// Declare the RAM variable
-	reg [DATA_WIDTH-1:0] ram[0:2**ADDR_WIDTH-1];
+// Declare the RAM variable
+reg [DATA_WIDTH-1:0] ram[0:2**ADDR_WIDTH-1];
 
-	// Variable to hold the registered read address
-	reg [ADDR_WIDTH-1:0] addr_reg;
+// Variable to hold the registered read address
+reg [ADDR_WIDTH-1:0] addr_reg;
+
+initial begin
+ $readmemh("memory.txt", ram);
+end
+
+always @ (posedge CLK) begin
+	// Write
+	if (we) begin
+		if( addr == 10'h07fc)
+			IOOut <= ram[IOIn];
+		ram[addr/2] <= data;
+	end
 	
-	initial begin
-    $readmemh("memory.txt", ram);
-	end
+	addr_reg <= addr/2;
+end
 
-	always @ (posedge CLK) begin
-		// Write
-		if (we) begin
-			if( addr == 10'h07fc)
-				IOOut <= ram[IOIn];
-			ram[addr] <= data;
-		end
-		
-		addr_reg <= addr;
-	end
-
-	// Continuous assignment implies read returns NEW data.
-	// This is the natural behavior of the TriMatrix memory
-	// blocks in Single Port mode.  
-	assign q = ram[addr_reg];
+// Continuous assignment implies read returns NEW data.
+// This is the natural behavior of the TriMatrix memory
+// blocks in Single Port mode.  
+assign q = ram[addr_reg];
 
 endmodule

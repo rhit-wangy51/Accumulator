@@ -82,12 +82,12 @@ AccMemory memsub(
 	.BneOrBeq(bneOrbeq),
 	.PCSrc(PCSrc),
 		//Wire
-	.ACCSrc(AccSrc),
+	.ACCSrc(ACCSrc),
 	.ACCWrite(AccWrite),
 	.SPWrite(SpWrite),
 		//ALU
 	.ALUSrcA(ALUSrcA),
-	.ALUSrcB(ALUArcB),
+	.ALUSrcB(ALUSrcB),
 	.ALUOp(ALUOp),
 	
 	//Wire Output

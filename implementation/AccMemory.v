@@ -20,7 +20,7 @@ module AccMemory(
 	output [1:0] PCWrite,
 	output [1:0] Branch,
 	
-	output [15:0] IRROut,
+	output [15:0] IROut,//used to be IRROut, crashes when we link it
 	output [15:0] MDROut,
 	output [15:0] IOOut,
 	output [15:0] MemOut
@@ -40,7 +40,7 @@ parameter RA = 16'h07fe;
 
 control control_inst
 (
-	.Opcode(MemOut[15:10]) ,	// input [5:0] Opcode_sig
+	.Opcode(MemOut[15:11]) ,	// input [4:0] Opcode_sig
 	.CLK(CLK) ,	// input  CLK_sig
 	.Reset(Reset) ,	// input  Reset_sig
 	.PCSrc(PCSrc) ,	// output [1:0] PCSrc_sig
@@ -52,10 +52,11 @@ control control_inst
 	.ACCWrite(ACCWrite) ,	// output [0:0] ACCWrite_sig
 	.ALUSrcA(ALUSrcA) ,	// output [1:0] ALUSrcA_sig
 	.ALUSrcB(ALUSrcB) ,	// output [2:0] ALUSrcB_sig
-	.ALUOp(ALUOp) ,	// output [1:0] ALUOp_sig
+	.ALUOp(ALUOp_sig) ,	// output [2:0] ALUOp_sig
 	.BneOrBeq(BneOrBeq) ,	// output [1:0] BneOrBeq_sig
 	.PCWrite(PCWrite) ,	// output [1:0] PCWrite_sig
-	.Branch(Branch) 	// output [1:0] Branch_sig
+	.Branch(Branch) ,	// output [1:0] Branch_sig
+	.IRWrite(IRWrite) 	// output [0:0] IRWrite_sig
 );
 
 defparam control_inst.Fetch = 0;

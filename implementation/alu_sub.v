@@ -28,7 +28,7 @@ mux2b16 ALUSrcA(
 );
 
 mux3b16 ALUSrcB(
-	.a(2'b10),
+	.a('b10),
 	.b(SE),
 	.c(MDR),
 	.d(ZE),
@@ -40,7 +40,7 @@ mux3b16 ALUSrcB(
 alu16 ALUC(
 	.A(AOut),
 	.B(BOut),
-	.OP(ALUOp),
+	.OP(ALUOP),
 	.Zero(Zero),
 	.Out(Out)
 );
