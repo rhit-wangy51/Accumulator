@@ -6,9 +6,10 @@ module alu_sub(
 	input [15:0] SE,
 	input [15:0] ZE,
 	input [15:0] SL1,
-	input [2:0] SrcA,
-	input [3:0] SrcB,
+	input [1:0] SrcA,
+	input [2:0] SrcB,
 	input [2:0] ALUOP,
+	input [0:0] Reset,
 	input [0:0] CLK,
 	output [15:0] Out,
 	output [15:0] aluOut,
@@ -28,7 +29,7 @@ mux2b16 ALUSrcA(
 );
 
 mux3b16 ALUSrcB(
-	.a('b10),
+	.a(16'h0002),
 	.b(SE),
 	.c(MDR),
 	.d(ZE),
@@ -47,8 +48,8 @@ alu16 ALUC(
 
 reg16 ALUOut(
 	.In(Out),
-	.E(1'b0),
-	.reset(1'b0),
+	.E(1'b1),
+	.reset(Reset),
 	.CLK(CLK),
 	.Out(aluOut)
 );

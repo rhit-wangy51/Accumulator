@@ -33,7 +33,7 @@ wire [15:0] MemO;
 wire [15:0] memMDRO;
 //Wires outputs
 wire [15:0] acco;
-wire [15:0] apo;
+wire [15:0] spo;
 wire [15:0] mdro;
 wire [15:0] seo;
 wire [15:0] sel;
@@ -49,7 +49,7 @@ PC pcs(
 	//Input
 	.Zero(zero),
 	.PCInA(aluResult),
-	.ZE(zeo),
+	.IRIn(IRo[10:0]),
 	.PCInC(aluOut),
 	//Control
 	.PCWrite(PCWrite),
@@ -91,7 +91,7 @@ AccMemory memsub(
 	.ALUOp(ALUOp),
 	
 	//Wire Output
-	.IRROut(IRo),
+	.IROut(IRo),
 	.MemOut(MemO),
 	.MDROut(memMDRO),
 	
@@ -102,7 +102,7 @@ AccMemory memsub(
 
 wires_subsystem wiresub(
 	//Input
-	.IR(IRo),
+	.IR(IRo[10:3]),
 	.MemData(MemO),
 	.MDR(memMDRO),
 	.ALU(aluResult),
@@ -116,7 +116,6 @@ wires_subsystem wiresub(
 	//Output
 	.AccOutput(acco),
 	.SpOutput(spo),
-	.MDROutPut(mdro),
 	.SE(seo),
 	.SELeft(sel),
 	.ZE(zeo)
@@ -128,7 +127,7 @@ alu_sub alus(
 	.PC(pcvalue),
 	.ACC(acco),
 	.SP(spo),
-	.MDR(mdro),
+	.MDR(memMDRO),
 	.SE(seo),
 	.ZE(zeo),
 	.SL1(sel),
@@ -141,7 +140,8 @@ alu_sub alus(
 	//Output
 	.Out(aluResult),
 	.aluOut(aluOut),
-	.Zero(zero)
+	.Zero(zero),
+	.Reset(reset)
 );
 
 

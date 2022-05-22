@@ -1,5 +1,5 @@
 Flow report for 16bAccumulator
-Thu May 19 10:12:52 2022
+Sat May 21 19:58:59 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 19 10:12:52 2022       ;
+; Flow Status                        ; Successful - Sat May 21 19:58:59 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; 16bAccumulator                              ;
 ; Top-level Entity Name              ; accumulatorFull                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0 / 6,272 ( 0 % )                           ;
-;     Total combinational functions  ; 0 / 6,272 ( 0 % )                           ;
-;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                           ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 385 / 6,272 ( 6 % )                         ;
+;     Total combinational functions  ; 372 / 6,272 ( 6 % )                         ;
+;     Dedicated logic registers      ; 128 / 6,272 ( 2 % )                         ;
+; Total registers                    ; 128                                         ;
 ; Total pins                         ; 34 / 92 ( 37 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Total memory bits                  ; 8,192 / 276,480 ( 3 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
 ; Device                             ; EP4CE6E22C6                                 ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/19/2022 10:12:30 ;
+; Start date & time ; 05/21/2022 19:58:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 16bAccumulator      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name     ; Section Id     ;
 +-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 79349043041443.165296954900180         ; --             ; --              ; --             ;
+; COMPILER_SIGNATURE_ID               ; 79349043041443.165317751407468         ; --             ; --              ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --             ; --              ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>         ; --              ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; accumulatorFull ; Top            ;
@@ -91,12 +91,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4720 MB             ; 00:00:20                           ;
-; Fitter               ; 00:00:04     ; 1.0                     ; 5600 MB             ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4813 MB             ; 00:00:19                           ;
+; Fitter               ; 00:00:08     ; 1.1                     ; 5634 MB             ; 00:00:11                           ;
 ; Assembler            ; 00:00:00     ; 1.0                     ; 4669 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4783 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:28                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4792 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4641 MB             ; 00:00:01                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

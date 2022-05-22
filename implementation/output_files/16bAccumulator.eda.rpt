@@ -1,5 +1,5 @@
 EDA Netlist Writer report for 16bAccumulator
-Thu May 19 10:12:52 2022
+Sat May 21 19:58:59 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu May 19 10:12:52 2022 ;
+; EDA Netlist Writer Status ; Successful - Sat May 21 19:58:59 2022 ;
 ; Revision Name             ; 16bAccumulator                        ;
 ; Top-level Entity Name     ; accumulatorFull                       ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,7 +88,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 19 10:12:51 2022
+    Info: Processing started: Sat May 21 19:58:57 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off 16bAccumulator -c 16bAccumulator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file 16bAccumulator_6_1200mv_85c_slow.vo in folder "C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/simulation/modelsim/" for EDA simulation tool
@@ -100,9 +100,9 @@ Info (204019): Generated file 16bAccumulator_6_1200mv_0c_v_slow.sdo in folder "C
 Info (204019): Generated file 16bAccumulator_min_1200mv_0c_v_fast.sdo in folder "C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file 16bAccumulator_v.sdo in folder "C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4635 megabytes
-    Info: Processing ended: Thu May 19 10:12:52 2022
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4641 megabytes
+    Info: Processing ended: Sat May 21 19:58:59 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

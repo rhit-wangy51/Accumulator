@@ -12,6 +12,21 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	shift_left
 
+} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v} {2 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module memory
+** Warning: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(26): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	memory
+
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_mux1b16.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_mux1b16.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_mux1b16
@@ -25,21 +40,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	alu16
-
-} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/control.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module control
-
-Top level modules:
-	control
-
-} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v} {2 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module memory
-** Warning: C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/memory.v(28): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-
-Top level modules:
-	memory
 
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux_5to1_test.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux_5to1_test.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -111,6 +111,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	se16
 
+} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module AccMemory
+
+Top level modules:
+	AccMemory
+
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_PC.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_PC.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_PC
@@ -125,13 +132,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	tb_connected_control_memory
 
-} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/AccMemory.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module AccMemory
-
-Top level modules:
-	AccMemory
-
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_reg16.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_reg16.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_reg16
@@ -145,13 +145,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	tb_mux2b16
-
-} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_mux1b1.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_mux1b1.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_mux1b1
-
-Top level modules:
-	tb_mux1b1
 
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/PC.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -174,6 +167,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	alu_sub
 
+} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_mux1b1.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_mux1b1.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_mux1b1
+
+Top level modules:
+	tb_mux1b1
+
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/connected_control_memory.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/connected_control_memory.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module connected_control_memory
@@ -181,12 +181,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	connected_control_memory
 
-} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16_tb.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16_tb.v}
+} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze5.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/ze5.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module se16_tb
+-- Compiling module ze5
 
 Top level modules:
-	se16_tb
+	ze5
 
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b16.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -195,6 +195,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	mux1b16
 
+} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16_tb.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/se16_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module se16_tb
+
+Top level modules:
+	se16_tb
+
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/shift_left_tb.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/shift_left_tb.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module shift_left_tb
@@ -202,12 +209,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	shift_left_tb
 
-} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_memory.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_memory.v}
+} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_16bAccumulator.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_16bAccumulator.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_memory
+-- Compiling module tb_16bAccumulator
 
 Top level modules:
-	tb_memory
+	tb_16bAccumulator
 
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux3b16.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -215,6 +222,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	mux3b16
+
+} {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_memory.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/tb_memory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_memory
+
+Top level modules:
+	tb_memory
 
 } {} {}} {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b1.v} {1 {vlog -work work -stats=none {C:/Users/wangy51/Documents/Rose-Hulman/2022 Spring/CSSE232/Project/rhit-csse232-2122c-project-yellow-2122c-03/implementation/mux1b1.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

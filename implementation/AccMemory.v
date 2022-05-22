@@ -28,11 +28,13 @@ module AccMemory(
 
 
 wire [15:0] memin;
+wire [15:0] MDR;
 wire [15:0] addr;
 wire [1:0] MemAddr;
 wire [0:0] MemData;
 wire [0:0] MemWrite;
 wire [0:0] IRWrite;
+wire [0:0] IsIO;
 
 
 parameter RA = 16'h07fe;
@@ -40,7 +42,7 @@ parameter RA = 16'h07fe;
 
 control control_inst
 (
-	.Opcode(MemOut[15:11]) ,	// input [4:0] Opcode_sig
+	.Opcode(IROut[15:11]) ,	// input [4:0] Opcode_sig
 	.CLK(CLK) ,	// input  CLK_sig
 	.Reset(Reset) ,	// input  Reset_sig
 	.PCSrc(PCSrc) ,	// output [1:0] PCSrc_sig
@@ -52,7 +54,7 @@ control control_inst
 	.ACCWrite(ACCWrite) ,	// output [0:0] ACCWrite_sig
 	.ALUSrcA(ALUSrcA) ,	// output [1:0] ALUSrcA_sig
 	.ALUSrcB(ALUSrcB) ,	// output [2:0] ALUSrcB_sig
-	.ALUOp(ALUOp_sig) ,	// output [2:0] ALUOp_sig
+	.ALUOp(ALUOp) ,	// output [2:0] ALUOp_sig
 	.BneOrBeq(BneOrBeq) ,	// output [1:0] BneOrBeq_sig
 	.PCWrite(PCWrite) ,	// output [1:0] PCWrite_sig
 	.Branch(Branch) ,	// output [1:0] Branch_sig
@@ -94,21 +96,20 @@ mux2b16 mux2b16_inst
 
 mux1b16 mux1b16_inst
 (
-	.A(A_sig) ,	// input [0:0] A_sig
-	.B(B_sig) ,	// input [0:0] B_sig
+	.A(ACC) ,	// input [0:0] A_sig
+	.B(PC) ,	// input [0:0] B_sig
 	.OP(MemData) ,	// input [0:0] OP_sig
 	.Out(memin) 	// output [0:0] Out_sig
 );
 
 memory memory_inst
 (
-	.data(memin[9:0]) ,	// input [DATA_WIDTH-1:0] data_sig
-	.IOIn(IOIn) ,	// input [DATA_WIDTH-1:0] IOIn_sig
+	.data(memin) ,	// input [DATA_WIDTH-1:0] data_sig
 	.addr(addr) ,	// input [ADDR_WIDTH-1:0] addr_sig
 	.we(MemWrite) ,	// input  we_sig
 	.CLK(CLK) ,	// input  clk_sig
 	.q(MemOut) ,	// output [DATA_WIDTH-1:0] q_sig
-	.IOOut(IOOut) 	// output [DATA_WIDTH-1:0] IOOut_sig
+	.IsIO(IsIO)
 );
 
 reg16 IR_inst
@@ -117,7 +118,8 @@ reg16 IR_inst
 	.E(IRWrite) ,	// input [0:0] E_sig
 	.reset(Reset) ,	// input [0:0] reset_sig
 	.CLK(CLK) ,	// input [0:0] CLK_sig
-	.Out(IROut) 	// output [15:0] Out_sig
+	.Out(IROut) , 	// output [15:0] Out_sig
+	.Preset(0)
 );
 
 reg16 MDR_inst
@@ -126,8 +128,28 @@ reg16 MDR_inst
 	.E(1) ,	// input [0:0] E_sig
 	.reset(Reset) ,	// input [0:0] reset_sig
 	.CLK(CLK) ,	// input [0:0] CLK_sig
+	.Out(MDR) , // output [15:0] Out_sig
+	.Preset(0)
+);
+
+reg16 IO_inst
+(
+	.In(memin) ,	// input [15:0] In_sig
+	.E(MemWrite & IsIO) ,	// input [0:0] E_sig
+	.reset(Reset) ,	// input [0:0] reset_sig
+	.CLK(CLK) ,	// input [0:0] CLK_sig
+	.Out(IOOut) , 	// output [15:0] Out_sig
+	.Preset(0)
+);
+
+mux1b16 mux1b16_MDROut
+(
+	.A(MDR) ,	// input [15:0] A_sig
+	.B(IOIn) ,	// input [15:0] B_sig
+	.OP(IsIO) ,	// input [0:0] OP_sig
 	.Out(MDROut) 	// output [15:0] Out_sig
 );
+
 
 defparam memory_inst.DATA_WIDTH = 16;
 defparam memory_inst.ADDR_WIDTH = 10;

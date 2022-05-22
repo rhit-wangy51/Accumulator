@@ -2,7 +2,144 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "Output[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Output[15]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "reset[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[8]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[9]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[10]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[11]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[12]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[13]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[14]",
+					"strict" : false
+				},
+				{
+					"name" : "IOIn[15]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

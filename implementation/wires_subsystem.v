@@ -10,7 +10,7 @@ module wires_subsystem(
 	input [0:0] SpWrite,
 	output [15:0] AccOutput,
 	output [15:0] SpOutput,
-	output [15:0] MDROutPut,
+//	output [15:0] MDROutPut,
 	output [15:0] SE,
 	output [15:0] SELeft,
 	output [15:0] ZE);
@@ -26,9 +26,9 @@ module wires_subsystem(
 	
 	mux3b16 AccSource(.a(EightShift), .b(MDR), .c(MemData), .d(SE), .e(ALU), .sel(AccSrc), .out(MuxOut));
 	
-	reg16 Acc (.In(MuxOut), .E(AccWrite), .reset(reset), .CLK(CLK), .Out(AccOutput));
+	reg16 Acc (.In(MuxOut), .E(AccWrite), .reset(reset), .CLK(CLK), .Out(AccOutput), .Preset(0));
 	
-	reg16 Sp (.In(ALU), .E(SpWrite), .reset(reset), .CLK(CLK), .Out(SpOutput));
+	reg16 Sp (.In(ALU), .E(SpWrite), .reset(reset), .CLK(CLK), .Out(SpOutput), .Preset(16'h02fe));
 	
 	assign EightShift = IR << 8;
 	

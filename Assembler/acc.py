@@ -15,7 +15,7 @@ global_addr = 0xFF00
 text_addr = 0x0000
 ra = 0xFFFE
 magicio = 0xFFFC
-label_dict = {"ra": 127, "io": 126}
+label_dict = {"ra": 255, "io": 254}
 
 def getvalue(address):
     return int((address - 0xFF00)/2)

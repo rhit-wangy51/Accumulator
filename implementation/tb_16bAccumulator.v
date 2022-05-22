@@ -19,7 +19,7 @@ accumulatorFull testAccumulator(
 parameter HALF_PERIOD = 50;
 
 initial begin
-    CLK = 0;
+    CLK = 1;
     forever begin
         #(HALF_PERIOD);
         CLK = ~CLK;

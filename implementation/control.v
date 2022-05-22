@@ -47,11 +47,15 @@ parameter    Add = 19;
 parameter    Slti = 20;
 parameter    Loadui = 21;
 
-
 //register calculation
 always @ (posedge CLK, posedge Reset) begin
 	if (Reset)
+	begin
+//		MemAddr = 'b0;
+//		MemData = 'b0;
+//		MemWrite = 'b0;
 		current_state = Fetch;
+	end
 	else 
 		current_state = next_state;
 end
@@ -66,6 +70,7 @@ always @ (current_state) begin
 	PCWrite = 0;
 	Branch = 0;
 	IRWrite = 0;
+	MemAddr = 0;
 
 	case (current_state)
 		Fetch:

@@ -1,47 +1,5 @@
 # Compile of ze16_tb.v was successful.
 # Compile of AccMemory.v was successful.
-# Compile of AccMemory_inst.v failed with 2 errors.
-# Compile of accumulatorFull.v was successful.
-# Compile of alu_sub.v was successful.
-# Compile of alu16.v was successful.
-# Compile of BlockMemoryControl.v was successful.
-# Compile of connected_control_memory.v was successful.
-# Compile of connected_control_memory_inst.v failed with 2 errors.
-# Compile of control.v was successful.
-# Compile of control_inst.v failed with 2 errors.
-# Compile of mem16.v was successful.
-# Compile of memory.v was successful with warnings.
-# Compile of memory_inst.v failed with 2 errors.
-# Compile of MIPS_control_unit_inst.v failed with 2 errors.
-# Compile of mux_5to1_test.v was successful.
-# Compile of mux1b1.v was successful.
-# Compile of mux1b16.v was successful.
-# Compile of mux1b16_inst.v failed with 2 errors.
-# Compile of mux2b16.v was successful.
-# Compile of mux2b16_inst.v failed with 2 errors.
-# Compile of mux3b16.v was successful.
-# Compile of PC.v was successful.
-# Compile of reg16.v was successful.
-# Compile of reg16_inst.v failed with 2 errors.
-# Compile of se16.v was successful.
-# Compile of se16_tb.v was successful.
-# Compile of shift_left.v was successful.
-# Compile of shift_left_tb.v was successful.
-# Compile of tb_16bAccumulator.v was successful.
-# Compile of tb_alu16.v was successful.
-# Compile of tb_connected_control_memory.v was successful.
-# Compile of tb_memory.v was successful.
-# Compile of tb_mux1b1 - Copy.v was successful.
-# Compile of tb_mux1b1.v was successful.
-# Compile of tb_mux1b16.v was successful.
-# Compile of tb_mux2b16.v was successful.
-# Compile of tb_PC.v was successful.
-# Compile of tb_reg16.v was successful.
-# Compile of wires_subsystem.v was successful.
-# Compile of ze16.v was successful.
-# 41 compiles, 8 failed with 16 errors.
-# Compile of ze16_tb.v was successful.
-# Compile of AccMemory.v was successful.
 # Compile of accumulatorFull.v was successful.
 # Compile of alu_sub.v was successful.
 # Compile of alu16.v was successful.
@@ -67,12 +25,10 @@
 # Compile of tb_memory.v was successful.
 # Compile of tb_mux1b1 - Copy.v was successful.
 # Compile of tb_mux1b1.v was successful.
-# Compile of tb_mux1b16.v was successful.
 # Compile of tb_mux2b16.v was successful.
 # Compile of tb_PC.v was successful.
 # Compile of tb_reg16.v was successful.
 # Compile of wires_subsystem.v was successful.
 # Compile of ze16.v was successful.
-# 33 compiles, 0 failed with no errors.
-# Load canceled
-# Load canceled
+# 32 compiles, 0 failed with no errors.
+vsim -gui -l msim_transcript work.tb_16bAccumulator
