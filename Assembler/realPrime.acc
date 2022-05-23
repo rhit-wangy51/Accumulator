@@ -1,0 +1,60 @@
+load io
+save	n
+jal	relPrime
+load	m
+save io
+save	c
+j endmain
+relPrime: loadi	2
+save	m
+ms	-6
+loop2:   load	m
+sw	0
+save	a
+load	n
+sw	2
+save	b
+load	ra
+sw	4
+jal	gcd
+save io
+save	o
+lw	0
+save	m
+lw	2
+save	n
+lw	4
+save	ra
+loadi	1
+bne	o tif2
+j end2
+tif2: load	m
+addi	1
+save	m
+j	loop2
+end2:    ms	6
+jv	ra
+gcd: loadi	0
+bne	a loop
+load	b	
+jv	ra
+loop: loadi	0
+bne	b go
+j	end
+go:     load	b
+slt	a
+save	i
+loadi	1
+beq	i tif
+j	else
+tif:       load	a
+sub	b
+save	a
+j	loop
+else:   load	b
+sub	a
+save	b
+j	loop
+end:   load    a
+jv	ra
+endmain: addi 0

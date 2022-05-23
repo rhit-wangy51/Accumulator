@@ -1,0 +1,8 @@
+loadi 6
+save a
+addi 5
+TAG1: load a
+addi 1
+addi 2
+save io
+j TAG1

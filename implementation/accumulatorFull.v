@@ -51,6 +51,7 @@ PC pcs(
 	.PCInA(aluResult),
 	.IRIn(IRo[10:0]),
 	.PCInC(aluOut),
+	.PCInD(MemO),
 	//Control
 	.PCWrite(PCWrite),
 	.Branch(Branch),
@@ -130,7 +131,7 @@ alu_sub alus(
 	.MDR(memMDRO),
 	.SE(seo),
 	.ZE(zeo),
-	.SL1(sel),
+	.IR(IRo[2:0]),
 	//Control
 	.SrcA(ALUSrcA),
 	.SrcB(ALUSrcB),

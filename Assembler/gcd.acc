@@ -1,0 +1,29 @@
+load io
+save a
+load io
+save b
+jal gcd
+save io
+gcd: loadi	0
+bne	a loop
+load	b	
+jv	ra
+loop: loadi	0
+bne	b go
+j	end
+go:     load	b
+slt	a
+save	i
+loadi	1
+beq	i tif
+j	else
+tif:       load	a
+sub	b
+save	a
+j	loop
+else:   load	b
+sub	a
+save	b
+j	loop
+end:   load    a
+jv	ra

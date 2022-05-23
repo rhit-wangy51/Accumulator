@@ -10,6 +10,8 @@ module alu16(
 always @ (A, B, OP) begin
 	if(A == B)
 		Zero <= 1'b1;
+	else
+		Zero <= 1'b0;
 		
 	case(OP)
 		3'b000: Out <= A & B;

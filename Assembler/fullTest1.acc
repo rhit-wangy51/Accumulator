@@ -1,0 +1,75 @@
+load io
+save io
+load io
+save a
+load io
+save b
+load a
+save io
+loadui 8
+save io
+loadi 30
+save io
+load a
+slt b
+save io
+load b
+slt a
+save io
+load a
+slti 0
+save io	
+load a
+slti 100 
+save io
+ms 4
+load a
+sw 0
+load b
+sw 2
+loadi 0
+lw 0
+save io
+lw 2
+save io
+load a
+sub b
+save io
+load a
+add b
+save io
+load a
+addi 1
+save io
+load a
+addi -1
+save io
+load a
+and b
+save io
+load a
+or b
+save io
+load a
+ori 15
+save io
+load a
+bne b BE
+save io
+BE: load b
+save io
+load b
+beq b BQ
+save io
+BQ: load a
+save io
+load a
+j TAG
+save io 
+TAG: load b	
+save io
+load b
+jal TAG2
+save io
+TAG2: load a
+jv ra

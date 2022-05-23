@@ -18,7 +18,7 @@ magicio = 0xFFFC
 label_dict = {"ra": 255, "io": 254}
 
 def getvalue(address):
-    return int((address - 0xFF00)/2)
+    return int((address - 0xFF00)/2) + 128
 
 print("Loading the opcode table")
 with open('assember_table.json', "r") as infile:
@@ -64,7 +64,9 @@ with open(srcpath, 'r') as codefile, open(dstpath, 'w') as ofile, open("%sd" % d
             else:
                 label_dict[immediate] = getvalue(global_addr)
                 immediate = getvalue(global_addr)
+                print(immediate)
                 global_addr+=2
+                
         elif(immediate.lstrip('+').isdigit() == True):
             immediate = int(immediate)
         else:
@@ -108,7 +110,13 @@ with open(srcpath, 'r') as codefile, open(dstpath, 'w') as ofile, open("%sd" % d
                   % ((text_addr - 0x0000)/2, line))
             raise ValueError("[Fatal Error] Wrong format in line %d: %s." 
                   % ((text_addr - 0x0000)/2, line))
-    
+        
+        if(opcode == "01000" or opcode == "01001"): # J type (J and Jal)
+            immediate =  int(immediate/2)
+            reserved = "{:03b}".format(immediate)[-3:]
+            immediate =  int(immediate/8)
+            
+
         # write into the obj file
         #print(" 0x{:04x}:  {} {:08b} {}\t {}".format(text_addr, opcode, immediate, reserved, line))
         dfile.write(" 0x{:04x}:  {} {:08b} {}\t {}".format(text_addr, opcode, immediate, reserved, line))

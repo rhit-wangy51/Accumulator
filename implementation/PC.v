@@ -6,6 +6,7 @@ module PC(
 	input [15:0] PCInA,
 	input [10:0] IRIn,
 	input [15:0] PCInC,
+	input [15:0] PCInD,
 	input	[1:0]	PCSrc,
 	input [0:0] CLK,
 	input [0:0] reset,
@@ -34,7 +35,7 @@ mux2b16 src_mux(
 	.A(PCInA),
 	.B(PCInB),
 	.C(PCInC),
-	.D(16'h0000),
+	.D(PCInD),
 	.OP(PCSrc),
 	.Out(mux16_out)
 );

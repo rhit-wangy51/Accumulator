@@ -5,7 +5,7 @@ module alu_sub(
 	input [15:0] MDR,
 	input [15:0] SE,
 	input [15:0] ZE,
-	input [15:0] SL1,
+	input [2:0] IR,
 	input [1:0] SrcA,
 	input [2:0] SrcB,
 	input [2:0] ALUOP,
@@ -19,6 +19,20 @@ module alu_sub(
 
 	wire [15:0] AOut;
 	wire [15:0] BOut;
+	wire [15:0] SL1;
+	wire [15:0] SEIR;
+	
+se13 se13_inst
+(
+	.In(IR) ,
+	.Out(SEIR)
+);
+
+shift_left zel(
+	.in(SEIR),
+	.out(SL1)
+);
+
 
 mux2b16 ALUSrcA(
 	.A(PC),

@@ -46,6 +46,7 @@ parameter    Ms = 18;
 parameter    Add = 19;
 parameter    Slti = 20;
 parameter    Loadui = 21;
+parameter    Jv = 22;
 
 //register calculation
 always @ (posedge CLK, posedge Reset) begin
@@ -193,6 +194,7 @@ always @ (current_state) begin
 				ALUOp = 'b011;
 				Branch = 1;
 				BneOrBeq = 1;
+				PCSrc = 'b10;
 			end
 			
 		Sub:
@@ -211,6 +213,7 @@ always @ (current_state) begin
 				ALUOp = 'b011;
 				Branch = 1;
 				BneOrBeq = 0;
+				PCSrc = 'b10;
 			end
 			
 		Jump:
@@ -230,7 +233,7 @@ always @ (current_state) begin
 		Add:
 			begin
 				ALUSrcA = 1;
-				ALUSrcB = 1;
+				ALUSrcB = 'b010;
 				ALUOp = 'b010;
 				ACCWrite = 1;
 				ACCSrc = 'b100;
@@ -251,6 +254,13 @@ always @ (current_state) begin
 				ACCSrc = 0;
 			end
 			
+		Jv:
+			begin
+				PCSrc = 'b11;
+				PCWrite = 1;
+				MemAddr = 'b10;
+			end
+			
 		default:
 			begin 
 				$display ("not implemented"); 
@@ -261,175 +271,179 @@ end
 
 //NEXT STATE calculation (depends on current state and opcode)       
 always @ (current_state, next_state, Opcode) begin
-	$display("The current state is %d", current_state);
+	//$display("The current state is %d", current_state);
 	
 	case (current_state)
 		Fetch:
 			begin
 				next_state = Decode;
-				$display("In Fetch, the next_state is %d", next_state);
+				//$display("In Fetch, the next_state is %d", next_state);
 			end
 			
 		Decode:
 			begin
-				$display("The opcode is %d", Opcode);
+				//$display("The opcode is %d", Opcode);
 				case (Opcode)
 					'b00001:
 						begin
 							next_state = Load;
-							$display("The next state is Load");
+							//$display("The next state is Load");
 						end
 					'b00010:
 						begin
 							next_state = Save;
-							$display("The next state is Save");
+							//$display("The next state is Save");
 						end
 					'b00011:
 						begin
 							next_state = Loadui;
-							$display("The next state is Loadui");
+							//$display("The next state is Loadui");
 						end
 					'b00100:
 						begin
 							next_state = Bne;
-							$display("The next state is Bne");
+							//$display("The next state is Bne");
 						end
 					'b00101:
 						begin next_state = Beq;
-							$display("The next state is Beq");
+							//$display("The next state is Beq");
 						end
 					'b00110:
 						begin next_state = Slt;
-							$display("The next state is Slt");
+							//$display("The next state is Slt");
 						end
 					'b00111:
 						begin next_state = Slti;
-							$display("The next state is Slti");
+							//$display("The next state is Slti");
 						end						
 					'b01000:
 						begin next_state = Jump;
-							$display("The next state is Jump");
+							//$display("The next state is Jump");
 						end
 					'b01001:
 						begin next_state = Jal;
-							$display("The next state is Jal");
+							//$display("The next state is Jal");
 						end						
 					'b01010:
 						begin next_state = SwOrLw;
-							$display("The next state is LwOrSw");
+							//$display("The next state is LwOrSw");
 						end						
 					'b01011:
 						begin next_state = SwOrLw;
-							$display("The next state is LwOrSw");
+							//$display("The next state is LwOrSw");
 						end						
 					'b01100:
 						begin next_state = Ms;
-							$display("The next state is Ms");
+							//$display("The next state is Ms");
 						end						
 					'b01101:
 						begin next_state = Sub;
-							$display("The next state is Sub");
+							//$display("The next state is Sub");
 						end		
 					'b01110:
 						begin next_state = Add;
-							$display("The next state is Add");
+							//$display("The next state is Add");
 						end				
 					'b01111:
 						begin next_state = Addi;
-							$display("The next state is Addi");
+							//$display("The next state is Addi");
 						end		
 					'b10000:
 						begin next_state = And;
-							$display("The next state is And");
+							//$display("The next state is And");
 						end		
 					'b10001:
 						begin next_state = Or;
-							$display("The next state is Or");
+							//$display("The next state is Or");
 						end		
 					'b10010:
 						begin next_state = Ori;
-							$display("The next state is Ori");
+							//$display("The next state is Ori");
 						end		
 					'b10011:
 						begin next_state = Loadi;
-							$display("The next state is Loadi");
-						end				
+							//$display("The next state is Loadi");
+						end	
+					'b10100:
+						begin next_state = Jv;
+							$display("The next state is Jv");
+						end			
 						
 					default:
 						begin 
-							$display(" Wrong Opcode %d ", Opcode);  
+							$display("%t Wrong Opcode %d ", $time, Opcode);  
 							next_state = Fetch; 
 						end
 				endcase  
 
-				$display("In Decode, the next_state is %d", next_state);
+				//$display("In Decode, the next_state is %d", next_state);
 			end
 			
 		Load:
 			begin
 				next_state = Fetch;
-				$display("In Load, the next_state is %d", next_state);
+				//$display("In Load, the next_state is %d", next_state);
 			end
 			
 		Addi:
 			begin
 				next_state = Fetch;
-				$display("In Addi, the next_state is %d", next_state);
+				//$display("In Addi, the next_state is %d", next_state);
 			end
 			
 		Save:
 			begin
 				next_state = Fetch;
-				$display("In Save, the next_state is %d", next_state);
+				//$display("In Save, the next_state is %d", next_state);
 			end
 			
 		Loadi:
 			begin
 				next_state = Fetch;
-				$display("In Loadi, the next_state is %d", next_state);
+				//$display("In Loadi, the next_state is %d", next_state);
 			end
 			
 		Jal:
 			begin
 				next_state = Fetch;
-				$display("In Jal, the next_state is %d", next_state);
+				//$display("In Jal, the next_state is %d", next_state);
 			end
 			
 		Ori:
 			begin
 				next_state = Fetch;
-				$display("In Ori, the next_state is %d", next_state);
+				//$display("In Ori, the next_state is %d", next_state);
 			end
 			
 		And:
 			begin
 				next_state = Fetch;
-				$display("In And, the next_state is %d", next_state);
+				//$display("In And, the next_state is %d", next_state);
 			end
 			
 		Slt:
 			begin
 				next_state = Fetch;
-				$display("In Slt, the next_state is %d", next_state);
+				//$display("In Slt, the next_state is %d", next_state);
 			end
 			
 		SwOrLw:
 			begin
-				$display("The opcode is %d", Opcode);
+				//$display("The opcode is %d", Opcode);
 				case (Opcode)
 					'b01011:
 						begin
 							next_state = Lw;
-							$display("The next state is Lw");
+							//$display("The next state is Lw");
 						end
 					'b01010:
 						begin
-							next_state = Lw;
-							$display("The next state is Sw");
+							next_state = Sw;
+							//$display("The next state is Sw");
 						end
 					default:
 						begin
-							$display(" Wrong Opcode %d ", Opcode);  
+							$display("%t Wrong Opcode %d ", $time, Opcode);  
 							next_state = Fetch;
 						end
 				endcase
@@ -438,67 +452,73 @@ always @ (current_state, next_state, Opcode) begin
 		Lw:
 			begin
 				next_state = Fetch;
-				$display("In Lw, the next_state is %d", next_state);
+				//$display("In Lw, the next_state is %d", next_state);
 			end
 			
 		Sw:
 			begin
 				next_state = Fetch;
-				$display("In Sw, the next_state is %d", next_state);
+				//$display("In Sw, the next_state is %d", next_state);
 			end
 			
 		Or:
 			begin
 				next_state = Fetch;
-				$display("In Or, the next_state is %d", next_state);
+				//$display("In Or, the next_state is %d", next_state);
 			end
 			
 		Beq:
 			begin
 				next_state = Fetch;
-				$display("In Beq, the next_state is %d", next_state);
+				//$display("In Beq, the next_state is %d", next_state);
 			end
 			
 		Sub:
 			begin
 				next_state = Fetch;
-				$display("In Sub, the next_state is %d", next_state);
+				//$display("In Sub, the next_state is %d", next_state);
 			end
 			
 		Bne:
 			begin
 				next_state = Fetch;
-				$display("In Bne, the next_state is %d", next_state);
+				//$display("In Bne, the next_state is %d", next_state);
 			end
 			
 		Jump:
 			begin
 				next_state = Fetch;
-				$display("In Jump, the next_state is %d", next_state);
+				//$display("In Jump, the next_state is %d", next_state);
 			end
 			
 		Ms:
 			begin
 				next_state = Fetch;
-				$display("In Ms, the next_state is %d", next_state);
+				//$display("In Ms, the next_state is %d", next_state);
 			end
 			
 		Add:
 			begin
 				next_state = Fetch;
-				$display("In Add, the next_state is %d", next_state);
+				//$display("In Add, the next_state is %d", next_state);
 			end
 		
 		Slti:
 			begin
 				next_state = Fetch;
-				$display("In Add, the next_state is %d", next_state);
+				//$display("In Add, the next_state is %d", next_state);
 			end
 			
 		Loadui:
 			begin
 				next_state = Fetch;
-				$display("In Add, the next_state is %d", next_state);
+				//$display("In Add, the next_state is %d", next_state);
+			end
+		
+		Jv:
+			begin
+				next_state = Fetch;
+				//$display("In Add, the next_state is %d", next_state);
 			end
 			
 		default:
@@ -508,6 +528,6 @@ always @ (current_state, next_state, Opcode) begin
 			end
 	endcase
 	
-	$display("After the tests, the next_state is %d", next_state);
+	//$display("After the tests, the next_state is %d", next_state);
 end
 endmodule
